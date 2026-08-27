@@ -156,8 +156,6 @@
     );
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 11px;
   font-weight: 700;
@@ -304,8 +302,6 @@
     );
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 11px;
   font-weight: 800;
@@ -339,8 +335,6 @@
   color: #d5b76a;
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 11px;
   font-weight: 800;
@@ -356,9 +350,6 @@
   color: #f7f1e5;
 
   
-    "Playfair Display",
-    Georgia,
-    serif;
 
   font-size:
     clamp(
@@ -438,8 +429,6 @@
     );
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 11px;
   font-weight: 800;
@@ -493,8 +482,6 @@
   color: #d2b264;
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 11px;
   font-weight: 800;
@@ -517,9 +504,6 @@
   color: #f5f0e5;
 
   
-    "Playfair Display",
-    Georgia,
-    serif;
 
   font-size:
     clamp(
@@ -560,8 +544,6 @@
     );
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 12px;
 
@@ -633,9 +615,6 @@
   color: #c8a75a;
 
   
-    "Playfair Display",
-    Georgia,
-    serif;
 
   font-size: 11px;
 
@@ -659,8 +638,7 @@
   color: #f5f0e5;
 
   
-    "Manrope",
-    sans-serif;
+    
 
   font-size: 11px;
   font-weight: 800;
@@ -717,8 +695,6 @@
     );
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 11px;
 
@@ -763,8 +739,6 @@
   background: #d3b469;
 
   
-    "Manrope",
-    sans-serif;
 
   font-size: 11px;
   font-weight: 800;
