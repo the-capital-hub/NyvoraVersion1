@@ -1,0 +1,811 @@
+/* =========================================================
+   PRACTICE AREA DETAILS
+   NYVORA · INDIAN PREMIUM LAW FIRM
+========================================================= */
+
+.practice-detail {
+  position: relative;
+  overflow: hidden;
+
+  padding: 72px 0 78px;
+
+  background: #f4efe4;
+  color: #103b2d;
+}
+
+.practice-detail-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+
+  gap: 58px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.practice-detail-image {
+  position: relative;
+}
+
+.practice-image-frame {
+  position: relative;
+
+  height: 470px;
+
+  overflow: hidden;
+
+  background: #103b2d;
+
+  box-shadow:
+    0 22px 45px rgba(8, 39, 29, 0.13);
+}
+
+.practice-image-frame::before {
+  content: "";
+
+  position: absolute;
+  z-index: 5;
+
+  inset: 13px;
+
+  border: 1px solid rgba(211, 178, 91, 0.58);
+
+  pointer-events: none;
+}
+
+.practice-image-frame img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter:
+    saturate(0.58)
+    contrast(1.07)
+    sepia(0.06);
+
+  transition: transform 0.9s ease;
+}
+
+.practice-image-frame:hover img {
+  transform: scale(1.035);
+}
+
+.practice-image-overlay {
+  position: absolute;
+  z-index: 2;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 26, 19, 0.03) 20%,
+      rgba(4, 26, 19, 0.78) 100%
+    );
+}
+
+.practice-image-top {
+  position: absolute;
+  z-index: 6;
+
+  top: 24px;
+  left: 26px;
+  right: 26px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.practice-image-top span:last-child {
+  color: #d2b264;
+}
+
+.practice-image-bottom {
+  position: absolute;
+  z-index: 6;
+
+  left: 27px;
+  bottom: 27px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.practice-image-bottom small {
+  color: #d2b264;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 6px;
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.practice-image-bottom strong {
+  color: #fff;
+
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  font-weight: 400;
+
+  line-height: 0.96;
+}
+
+.practice-image-bottom em {
+  color: #d2b264;
+  font-style: italic;
+}
+
+.practice-image-number {
+  position: absolute;
+  z-index: 6;
+
+  right: 28px;
+  bottom: 27px;
+
+  color: #d2b264;
+
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+
+/* =========================================================
+   GENERAL CONTENT
+========================================================= */
+
+.practice-detail-content {
+  max-width: 570px;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 19px;
+}
+
+.section-label span {
+  width: 32px;
+  height: 1px;
+
+  background: #b08d42;
+}
+
+.section-label p {
+  margin: 0;
+
+  color: #a17d37;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0;
+
+  color: #103b2d;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(46px, 5vw, 72px);
+  font-weight: 400;
+
+  letter-spacing: -0.06em;
+  line-height: 0.88;
+}
+
+.section-title span {
+  color: #b08d42;
+  font-style: italic;
+}
+
+.practice-lead {
+  max-width: 510px;
+
+  margin: 24px 0 16px;
+  padding-left: 14px;
+
+  border-left: 1px solid #b08d42;
+
+  color: #173f31;
+
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+
+  line-height: 1.45;
+}
+
+.section-copy {
+  max-width: 540px;
+
+  margin: 0 0 12px;
+
+  color: #717973;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   PRIMARY LINK
+========================================================= */
+
+.practice-primary-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 15px;
+  padding: 10px 7px 10px 16px;
+
+  background: #103b2d;
+  color: #f5f0e5;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.practice-primary-link b {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #d2b264;
+
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.practice-primary-link:hover {
+  transform: translateY(-2px);
+
+  background: #174936;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.practice-services {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 76px 0 80px;
+
+  background: #0b3528;
+  color: #f5f0e5;
+}
+
+.practice-services-head {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 340px;
+
+  gap: 55px;
+
+  align-items: end;
+
+  margin-bottom: 31px;
+}
+
+.section-label-light p {
+  color: #d2b264;
+}
+
+.section-label-light span {
+  background: #d2b264;
+}
+
+.section-title-light {
+  color: #f5f0e5;
+}
+
+/* SINGLE LINE */
+
+.practice-services-head .section-title,
+.practice-approach-head .section-title {
+  white-space: nowrap;
+
+  font-size: clamp(39px, 4.4vw, 66px);
+
+  line-height: 0.94;
+}
+
+.section-copy-light {
+  color: rgba(245, 240, 229, 0.45);
+}
+
+.practice-services-head .section-copy {
+  max-width: 340px;
+
+  margin-bottom: 0;
+}
+
+.practice-services-list {
+  position: relative;
+  z-index: 2;
+
+  border-top: 1px solid rgba(245, 240, 229, 0.13);
+}
+
+.practice-service-row {
+  display: grid;
+
+  grid-template-columns: 58px minmax(0, 1fr) 34px;
+
+  gap: 18px;
+
+  align-items: center;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid rgba(245, 240, 229, 0.13);
+
+  transition:
+    padding-left 0.3s ease,
+    background 0.3s ease;
+}
+
+.practice-service-row:hover {
+  padding-left: 9px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.practice-service-row > span {
+  color: #c9a657;
+
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+}
+
+.practice-service-row h3 {
+  margin: 0;
+
+  color: #f5f0e5;
+
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+}
+
+.practice-service-row b {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(211, 178, 91, 0.42);
+
+  background: transparent !important;
+
+  color: #d2b264 !important;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.practice-service-row:hover b {
+  transform: translate(3px, -3px);
+
+  background: rgba(211, 178, 91, 0.1) !important;
+}
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.practice-approach {
+  position: relative;
+
+  padding: 76px 0 80px;
+
+  background: #f1eadc;
+
+  color: #103b2d;
+}
+
+.practice-approach-head {
+  max-width: 900px;
+
+  margin-bottom: 34px;
+}
+
+.practice-approach-head .section-copy {
+  margin-top: 17px;
+}
+
+.practice-steps {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(16, 59, 45, 0.16);
+}
+
+.practice-step {
+  position: relative;
+
+  min-height: 205px;
+
+  padding: 19px 18px;
+
+  border-right: 1px solid rgba(16, 59, 45, 0.16);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.practice-step:first-child {
+  border-left: 1px solid rgba(16, 59, 45, 0.16);
+}
+
+.practice-step:hover {
+  background: rgba(255, 255, 255, 0.4);
+
+  transform: translateY(-3px);
+}
+
+.practice-step > span {
+  color: #b08d42;
+
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+
+.practice-step h3 {
+  margin: 27px 0 8px;
+
+  color: #103b2d;
+
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+}
+
+.practice-step p {
+  max-width: 210px;
+
+  margin: 0;
+
+  color: #747b76;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.practice-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 52px 0;
+
+  background: #103b2d;
+
+  color: #fff;
+}
+
+.practice-cta .container {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.practice-cta h2 {
+  margin: 8px 0 0;
+
+  color: #f5f0e5;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(37px, 4.7vw, 60px);
+  font-weight: 400;
+
+  letter-spacing: -0.055em;
+
+  line-height: 0.91;
+}
+
+.practice-cta h2 span {
+  color: #d2b264;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .practice-detail {
+    padding: 62px 0 68px;
+  }
+
+  .practice-detail-grid {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+  .practice-detail-content {
+    max-width: 680px;
+  }
+
+  .practice-image-frame {
+    height: 420px;
+  }
+
+  .practice-services {
+    padding: 68px 0;
+  }
+
+  .practice-services-head {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .practice-services-head .section-title,
+  .practice-approach-head .section-title {
+    white-space: nowrap;
+
+    font-size: clamp(38px, 5vw, 55px);
+  }
+
+  .practice-services-head .section-copy {
+    max-width: 450px;
+  }
+
+  .practice-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .practice-step {
+    min-height: 195px;
+  }
+
+  .practice-step:nth-child(2) {
+    border-right: 0;
+  }
+
+  .practice-step:nth-child(3),
+  .practice-step:nth-child(4) {
+    border-top: 1px solid rgba(16, 59, 45, 0.16);
+  }
+
+  .practice-step:nth-child(3) {
+    border-left: 1px solid rgba(16, 59, 45, 0.16);
+  }
+
+  .practice-cta .container {
+    align-items: flex-end;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .practice-detail {
+    padding: 54px 0 60px;
+  }
+
+  .practice-image-frame {
+    height: 350px;
+  }
+
+  .practice-image-frame::before {
+    inset: 10px;
+  }
+
+  .practice-image-top {
+    top: 20px;
+
+    left: 21px;
+    right: 21px;
+
+    font-size: 5px;
+  }
+
+  .practice-image-bottom {
+    left: 22px;
+    bottom: 22px;
+  }
+
+  .practice-image-bottom strong {
+    font-size: 23px;
+  }
+
+  .practice-image-number {
+    right: 22px;
+    bottom: 22px;
+
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 44px;
+  }
+
+  .practice-lead {
+    font-size: 16px;
+  }
+
+  .practice-services {
+    padding: 60px 0 64px;
+  }
+
+  .practice-services-head .section-title,
+  .practice-approach-head .section-title {
+    white-space: normal;
+
+    font-size: 42px;
+
+    line-height: 0.92;
+  }
+
+  .practice-service-row {
+    grid-template-columns: 36px minmax(0, 1fr) 30px;
+
+    gap: 11px;
+
+    padding: 15px 0;
+  }
+
+  .practice-service-row h3 {
+    font-size: 20px;
+  }
+
+  .practice-service-row b {
+    width: 27px;
+    height: 27px;
+
+    font-size: 12px;
+  }
+
+  .practice-approach {
+    padding: 60px 0 64px;
+  }
+
+  .practice-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-step,
+  .practice-step:nth-child(2),
+  .practice-step:nth-child(3),
+  .practice-step:nth-child(4) {
+    min-height: auto;
+
+    padding: 18px;
+
+    border-left: 1px solid rgba(16, 59, 45, 0.16);
+    border-right: 1px solid rgba(16, 59, 45, 0.16);
+    border-bottom: 1px solid rgba(16, 59, 45, 0.16);
+    border-top: 0;
+  }
+
+  .practice-step:first-child {
+    border-top: 1px solid rgba(16, 59, 45, 0.16);
+  }
+
+  .practice-step h3 {
+    margin-top: 21px;
+  }
+
+  .practice-cta {
+    padding: 46px 0;
+  }
+
+  .practice-cta .container {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 23px;
+  }
+
+  .practice-cta h2 {
+    font-size: 37px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .practice-image-frame {
+    height: 325px;
+  }
+
+  .practice-image-bottom strong {
+    font-size: 21px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .practice-service-row h3 {
+    font-size: 18px;
+  }
+
+  .practice-cta h2 {
+    font-size: 34px;
+  }
+}
+

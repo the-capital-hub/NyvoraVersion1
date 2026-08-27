@@ -1,0 +1,298 @@
+/* =========================================================
+   TRUST / CREDENTIALS
+========================================================= */
+
+.trust {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    #f4efe4;
+
+  border-bottom:
+    1px solid
+    rgba(16, 59, 45, 0.12);
+}
+
+
+/* Top gold accent */
+
+.trust::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    #c8a85c;
+
+  opacity: 0.48;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.trust-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.trust-item {
+  position: relative;
+
+  min-height:
+    145px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    26px 34px;
+
+  border-right:
+    1px solid
+    rgba(16, 59, 45, 0.12);
+
+  transition:
+    background-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.trust-item:first-child {
+  border-left:
+    1px solid
+    rgba(16, 59, 45, 0.12);
+}
+
+.trust-item:hover {
+  background:
+    rgba(16, 59, 45, 0.025);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.trust-number {
+  display: flex;
+
+  align-items: flex-start;
+
+  color:
+    #103b2d;
+
+  
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  line-height:
+    0.9;
+}
+
+.trust-number span {
+  font-size:
+    clamp(
+      42px,
+      4vw,
+      56px
+    );
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.trust-line {
+  width:
+    28px;
+
+  height:
+    1px;
+
+  margin:
+    15px 0 11px;
+
+  background:
+    #c5a457;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.trust-label {
+  color:
+    #6b716c;
+
+  
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.16em;
+
+  line-height:
+    1.5;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .trust-item {
+    min-height:
+      135px;
+
+    padding:
+      24px 25px;
+  }
+
+  .trust-number span {
+    font-size:
+      44px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .trust-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .trust-item {
+    min-height:
+      128px;
+
+    padding:
+      23px 20px;
+  }
+
+
+  /* Vertical separators */
+
+  .trust-item:nth-child(2) {
+    border-right:
+      none;
+  }
+
+
+  /* Horizontal separators */
+
+  .trust-item:nth-child(3),
+  .trust-item:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(16, 59, 45, 0.12);
+  }
+
+  .trust-number span {
+    font-size:
+      39px;
+  }
+
+  .trust-line {
+    width:
+      25px;
+
+    margin:
+      12px 0 9px;
+  }
+
+  .trust-label {
+    font-size:
+      7px;
+
+    letter-spacing:
+      0.13em;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .trust-item {
+    min-height:
+      120px;
+
+    padding:
+      21px 16px;
+  }
+
+  .trust-number span {
+    font-size:
+      34px;
+  }
+
+  .trust-label {
+    font-size:
+      6.5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .trust-item {
+    padding:
+      20px 13px;
+  }
+
+  .trust-number span {
+    font-size:
+      31px;
+  }
+}

@@ -1,0 +1,976 @@
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.intro {
+  position: relative;
+  overflow: hidden;
+
+  padding: 88px 0 92px;
+
+  background: #f4efe4;
+  color: #103b2d;
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+========================================================= */
+
+.intro-bg-number {
+  position: absolute;
+
+  top: 70px;
+  right: -85px;
+
+  color: rgba(16, 59, 45, 0.022);
+
+   
+  font-size: clamp(250px, 29vw, 470px);
+  font-weight: 500;
+  line-height: 0.7;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.intro-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.intro-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(16, 59, 45, 0.13);
+}
+
+.intro-label {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #a17d34;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.intro-label-line {
+  width: 36px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: #b89548;
+}
+
+.intro-location {
+  margin: 0;
+
+  color: rgba(16, 59, 45, 0.46);
+
+   
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.intro-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(360px, 0.95fr);
+
+  gap: clamp(55px, 7vw, 105px);
+
+  padding-top: 52px;
+}
+
+
+/* =========================================================
+   LEFT HEADING
+========================================================= */
+
+.intro-heading {
+  padding-top: 2px;
+}
+
+.intro-overline {
+  margin: 0 0 16px;
+
+  color: rgba(16, 59, 45, 0.42);
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.intro-heading h2 {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #103b2d;
+
+   
+  font-size: clamp(60px, 6.5vw, 98px);
+  font-weight: 400;
+  /* letter-spacing: -0.085em; */
+  line-height: 0.98;
+}
+
+.intro-heading h2 em {
+  color: #b28f43;
+  font-style: italic;
+}
+
+.intro-heading-line {
+  width: 64px;
+  height: 1px;
+
+  margin-top: 31px;
+
+  background: #c2a254;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.intro-copy {
+  align-self: start;
+
+  padding-top: 8px;
+}
+
+.intro-description {
+  max-width: 510px;
+
+  margin: 0;
+
+  color: #65716b;
+
+   
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.intro-values {
+  margin-top: 30px;
+
+  border-top: 1px solid rgba(16, 59, 45, 0.13);
+}
+
+.intro-value {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    32px
+    minmax(0, 1fr)
+    20px;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 63px;
+
+  border-bottom: 1px solid rgba(16, 59, 45, 0.11);
+
+  transition:
+    padding-left 260ms ease,
+    background-color 260ms ease;
+}
+
+.intro-value:hover {
+  padding-left: 6px;
+
+  background: rgba(16, 59, 45, 0.018);
+}
+
+.intro-value-number {
+  color: #b18e40;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.intro-value-content {
+  min-width: 0;
+}
+
+.intro-value-content strong {
+  display: block;
+
+  color: #123c2d;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.intro-value-content p {
+  margin: 5px 0 0;
+
+  color: #7a827d;
+
+   
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.intro-value-arrow {
+  color: #b18e40;
+
+   
+  font-size: 13px;
+
+  opacity: 0;
+
+  transform: translate(-4px, 4px);
+
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+.intro-value:hover .intro-value-arrow {
+  opacity: 1;
+
+  transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   STORY LINK
+========================================================= */
+
+.intro-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 23px;
+
+  color: #123c2d;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: color 250ms ease;
+}
+
+.intro-link:hover {
+  color: #a17e36;
+  text-decoration: none;
+}
+
+.intro-link b {
+  color: #b18e40;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  transition: transform 280ms ease;
+}
+
+.intro-link:hover b {
+  transform: translate(4px, -3px);
+}
+
+
+/* =========================================================
+   FULL WIDTH IMAGE
+========================================================= */
+
+.intro-visual {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 48px;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+/*
+   Important:
+   Image now fills the entire container.
+   No 78% width.
+   No artificial right margin.
+*/
+
+.intro-image-wrap {
+  position: relative;
+
+  width: 100%;
+  height: 485px;
+
+  overflow: hidden;
+
+  background: #173e30;
+}
+
+.intro-image-wrap img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center 42%;
+
+  filter:
+    saturate(0.62)
+    contrast(1.06);
+
+  transition:
+    transform 1.2s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.intro-visual:hover
+.intro-image-wrap img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.intro-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 42, 32, 0.04) 0%,
+      rgba(8, 42, 32, 0.08) 40%,
+      rgba(7, 34, 26, 0.88) 100%
+    );
+}
+
+
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.intro-image-wrap::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 14px;
+
+  border: 1px solid rgba(
+    218,
+    187,
+    105,
+    0.34
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE CORNER
+========================================================= */
+
+.intro-image-corner {
+  position: absolute;
+
+  right: 14px;
+  bottom: 14px;
+
+  width: 58px;
+  height: 58px;
+
+  border-right: 1px solid
+    rgba(218, 187, 105, 0.78);
+
+  border-bottom: 1px solid
+    rgba(218, 187, 105, 0.78);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE TOP
+========================================================= */
+
+.intro-image-top {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 25px;
+  left: 27px;
+  right: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: rgba(
+    250,
+    245,
+    235,
+    0.72
+  );
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
+
+.intro-image-caption {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 30px;
+  bottom: 29px;
+}
+
+.intro-image-caption > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #d5b76b;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.intro-image-caption h3 {
+  margin: 0;
+
+  color: #f7f1e5;
+
+   "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    30px,
+    3vw,
+    44px
+  );
+
+  font-weight: 400;
+
+  letter-spacing: -0.035em;
+
+  line-height: 0.98;
+}
+
+.intro-image-caption em {
+  color: #d6b86b;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   GOLD SIDE DETAIL
+========================================================= */
+
+.intro-gold-bar {
+  position: absolute;
+
+  z-index: 4;
+
+  right: -1px;
+  top: 42px;
+
+  width: 1px;
+  height: 170px;
+
+  background: #bd9d52;
+}
+
+.intro-gold-bar::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: -5px;
+
+  width: 11px;
+  height: 1px;
+
+  background: #bd9d52;
+}
+
+
+/* =========================================================
+   IMAGE NOTE
+========================================================= */
+
+.intro-image-note {
+  position: absolute;
+
+  right: -30px;
+  bottom: 19px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  transform:
+    rotate(90deg)
+    translateX(100%);
+
+  transform-origin:
+    right bottom;
+}
+
+.intro-image-note span {
+  color: #b18e40;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.intro-image-note p {
+  margin: 0;
+
+  color: rgba(
+    18,
+    60,
+    45,
+    0.48
+  );
+
+   
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .intro {
+    padding:
+      80px 0
+      86px;
+  }
+
+  .intro-main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(330px, 0.9fr);
+
+    gap: 48px;
+
+    padding-top: 46px;
+  }
+
+  .intro-heading h2 {
+    font-size:
+      clamp(
+        56px,
+        7vw,
+        82px
+      );
+  }
+
+  .intro-visual {
+    margin-top: 42px;
+  }
+
+  .intro-image-wrap {
+    height: 440px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .intro {
+    padding:
+      70px 0
+      76px;
+  }
+
+  .intro-bg-number {
+    top: 260px;
+    right: -90px;
+
+    font-size: 280px;
+
+    opacity: 0.45;
+  }
+
+  .intro-top {
+    gap: 14px;
+  }
+
+  .intro-main {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    padding-top: 40px;
+  }
+
+  .intro-heading h2 {
+    max-width: 650px;
+
+    font-size:
+      clamp(
+        53px,
+        13vw,
+        78px
+      );
+  }
+
+  .intro-copy {
+    padding-top: 0;
+  }
+
+  .intro-description {
+    max-width: 650px;
+
+    font-size: 11.5px;
+
+    line-height: 1.85;
+  }
+
+  .intro-values {
+    margin-top: 27px;
+  }
+
+  .intro-value {
+    min-height: 62px;
+  }
+
+  .intro-value-arrow {
+    opacity: 1;
+    transform: none;
+  }
+
+
+  /*
+     Full width image on mobile too.
+  */
+
+  .intro-visual {
+    width: 100%;
+
+    margin-top: 8px;
+  }
+
+  .intro-image-wrap {
+    height: 430px;
+  }
+
+  .intro-gold-bar {
+    right: -1px;
+
+    height: 125px;
+  }
+
+  .intro-image-note {
+    right: -21px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .intro {
+    padding:
+      60px 0
+      66px;
+  }
+
+  .intro-bg-number {
+    display: none;
+  }
+
+  .intro-top {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .intro-label {
+    font-size: 11px;
+  }
+
+  .intro-location {
+    font-size: 11px;
+  }
+
+  .intro-main {
+    gap: 29px;
+
+    padding-top: 35px;
+  }
+
+  .intro-overline {
+    margin-bottom: 13px;
+
+    font-size: 11px;
+  }
+
+  .intro-heading h2 {
+    font-size:
+      clamp(
+        47px,
+        14vw,
+        62px
+      );
+
+    line-height: 0.88;
+  }
+
+  .intro-heading-line {
+    width: 48px;
+
+    margin-top: 23px;
+  }
+
+  .intro-description {
+    font-size: 10.8px;
+
+    line-height: 1.82;
+  }
+
+  .intro-values {
+    margin-top: 24px;
+  }
+
+  .intro-value {
+    grid-template-columns:
+      27px
+      minmax(0, 1fr)
+      16px;
+
+    gap: 9px;
+
+    min-height: 61px;
+  }
+
+  .intro-value-content strong {
+    font-size: 7.3px;
+  }
+
+  .intro-value-content p {
+    margin-top: 4px;
+
+    font-size: 11px;
+  }
+
+  .intro-link {
+    margin-top: 21px;
+
+    font-size: 11px;
+  }
+
+
+  /*
+     No side whitespace on mobile.
+  */
+
+  .intro-visual {
+    width: 100%;
+
+    margin-top: 4px;
+  }
+
+  .intro-image-wrap {
+    height: 390px;
+  }
+
+  .intro-image-wrap::after {
+    inset: 10px;
+  }
+
+  .intro-image-corner {
+    right: 10px;
+    bottom: 10px;
+
+    width: 43px;
+    height: 43px;
+  }
+
+  .intro-image-top {
+    top: 18px;
+    left: 19px;
+    right: 19px;
+
+    font-size: 11px;
+  }
+
+  .intro-image-caption {
+    left: 20px;
+    bottom: 21px;
+  }
+
+  .intro-image-caption > span {
+    margin-bottom: 7px;
+
+    font-size: 11px;
+  }
+
+  .intro-image-caption h3 {
+    font-size: 27px;
+  }
+
+  .intro-gold-bar {
+    height: 105px;
+  }
+
+  .intro-image-note {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .intro {
+    padding-top: 54px;
+  }
+
+  .intro-heading h2 {
+    font-size: 45px;
+  }
+
+  .intro-description {
+    font-size: 10.4px;
+  }
+
+  .intro-image-wrap {
+    height: 355px;
+  }
+
+  .intro-image-caption h3 {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .intro *,
+  .intro *::before,
+  .intro *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================================================
+   LINK RESET
+========================================================= */
+
+.intro a,
+.intro a:hover,
+.intro a:focus,
+.intro a:active,
+.intro a:visited {
+  text-decoration: none;
+}

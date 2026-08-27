@@ -1,0 +1,591 @@
+/* =========================================================
+   CASE RESULTS — FINAL POLISH
+========================================================= */
+
+.case {
+  position: relative;
+  overflow: hidden;
+  padding: 105px 0 110px;
+  background: #0d3428;
+  color: #f5f0e5;
+}
+
+.case,
+.case * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BACKGROUND DETAIL
+========================================================= */
+
+.case-bg-number {
+  position: absolute;
+  right: -70px;
+  bottom: -105px;
+
+  color: rgba(214, 184, 103, 0.025);
+
+   
+  font-size: clamp(260px, 34vw, 540px);
+  font-weight: 400;
+  line-height: 0.7;
+  letter-spacing: -0.08em;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.case-container {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+
+  gap: 70px;
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.case-intro {
+  max-width: 465px;
+}
+
+.case-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-bottom: 22px;
+}
+
+.case-eyebrow span {
+  width: 36px;
+  height: 1px;
+  flex-shrink: 0;
+
+  background: #d2b264;
+}
+
+.case-eyebrow p {
+  margin: 0;
+
+  color: #d2b264;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.case-intro h2 {
+  margin: 0;
+
+  color: #f5f0e5;
+
+   
+  font-size: clamp(55px, 6.1vw, 88px);
+  font-weight: 400;
+
+  letter-spacing: -0.065em;
+  line-height: 0.86;
+}
+
+.case-intro h2 em {
+  color: #d2b264;
+  font-style: italic;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.case-description {
+  max-width: 390px;
+
+  margin: 25px 0 0;
+
+  color: rgba(245, 240, 229, 0.52);
+
+   
+  font-size: 10px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.case-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 23px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid rgba(210, 178, 100, 0.48);
+
+  color: #f5f0e5;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.case-link b {
+  color: #d2b264;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.case-link:hover {
+  gap: 19px;
+  color: #d2b264;
+}
+
+/* =========================================================
+   CONFIDENTIALITY
+========================================================= */
+
+.case-confidential {
+  max-width: 350px;
+
+  margin-top: 42px;
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(245, 240, 229, 0.11);
+}
+
+.case-confidential span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #b08d42;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.case-confidential p {
+  margin: 0;
+
+  color: rgba(245, 240, 229, 0.31);
+
+   
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.case-card {
+  position: relative;
+
+  min-height: 455px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 28px 30px 22px;
+
+  overflow: hidden;
+
+  background: #f4efe4;
+  color: #103b2d;
+
+  border: 1px solid rgba(178, 143, 66, 0.28);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(178, 143, 66, 0.55);
+}
+
+/* =========================================================
+   INNER FRAME
+========================================================= */
+
+.case-card-frame {
+  position: absolute;
+  inset: 11px;
+
+  border: 1px solid rgba(178, 143, 66, 0.35);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.case-card-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4px 17px;
+
+  border-bottom: 1px solid rgba(16, 59, 45, 0.12);
+
+  color: #aa853b;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.case-card-content {
+  position: relative;
+  z-index: 2;
+
+  padding: 32px 4px 30px;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.case-card-label {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #ad893f;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.case-card h3 {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #123d2e;
+
+   
+  font-size: clamp(34px, 3.55vw, 54px);
+  font-weight: 400;
+
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.case-card h3 em {
+  color: #ad893f;
+  font-style: italic;
+}
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.case-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 34px;
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(16, 59, 45, 0.13);
+}
+
+.case-info > div {
+  min-width: 0;
+}
+
+.case-info small {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #ae8a40;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.case-info b {
+  display: block;
+
+  max-width: 145px;
+
+  color: #173f31;
+
+   
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.case-card-footer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4px;
+
+  color: #777e79;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.case-arrow {
+  color: #b08d42;
+
+  font-size: 27px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.case-card:hover .case-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .case {
+    padding: 85px 0 90px;
+  }
+
+  .case-container {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 45px;
+  }
+
+  .case-intro h2 {
+    font-size: clamp(50px, 6.5vw, 72px);
+  }
+
+  .case-card {
+    min-height: 430px;
+    padding: 25px 25px 20px;
+  }
+
+  .case-card h3 {
+    font-size: 36px;
+  }
+
+  .case-card-content {
+    padding-top: 28px;
+  }
+
+  .case-info {
+    gap: 12px;
+  }
+
+  .case-info b {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+  .case {
+    padding: 70px 0 75px;
+  }
+
+  .case-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .case-intro {
+    max-width: 600px;
+  }
+
+  .case-intro h2 {
+    font-size: 55px;
+  }
+
+  .case-description {
+    max-width: 500px;
+    font-size: 10px;
+  }
+
+  .case-confidential {
+    margin-top: 30px;
+  }
+
+  .case-card {
+    min-height: 430px;
+  }
+
+  .case-card h3 {
+    font-size: 35px;
+  }
+
+  .case-info {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    margin-top: 28px;
+  }
+
+  .case-info > div {
+    padding: 11px 0;
+
+    border-bottom: 1px solid rgba(16, 59, 45, 0.11);
+  }
+
+  .case-info > div:last-child {
+    border-bottom: none;
+  }
+
+  .case-info b {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+  .case {
+    padding: 60px 0 65px;
+  }
+
+  .case-container {
+    gap: 34px;
+  }
+
+  .case-intro h2 {
+    font-size: 45px;
+    line-height: 0.88;
+  }
+
+  .case-description {
+    margin-top: 21px;
+    font-size: 12px;
+  }
+
+  .case-confidential {
+    margin-top: 27px;
+  }
+
+  .case-card {
+    min-height: 410px;
+
+    padding: 21px 18px 18px;
+  }
+
+  .case-card-frame {
+    inset: 9px;
+  }
+
+  .case-card-top {
+    padding-bottom: 14px;
+    font-size: 11px;
+  }
+
+  .case-card-content {
+    padding: 25px 3px 22px;
+  }
+
+  .case-card-label {
+    margin-bottom: 11px;
+    font-size: 11px;
+  }
+
+  .case-card h3 {
+    font-size: 29px;
+    line-height: 1;
+  }
+
+  .case-info {
+    margin-top: 25px;
+  }
+
+  .case-info > div {
+    padding: 9px 0;
+  }
+
+  .case-info small {
+    font-size: 11px;
+  }
+
+  .case-info b {
+    font-size: 11px;
+  }
+
+  .case-card-footer {
+    padding: 0 3px;
+    font-size: 4.5px;
+  }
+
+  .case-arrow {
+    font-size: 23px;
+  }
+}

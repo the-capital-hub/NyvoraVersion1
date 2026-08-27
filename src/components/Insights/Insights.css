@@ -1,0 +1,738 @@
+/* =========================================================
+   NYVORA — INSIGHTS
+   FINAL CLIENT VERSION
+========================================================= */
+
+.insights {
+  position: relative;
+  overflow: hidden;
+
+  padding: 35px 0 30px;
+
+  background: #f4efe4;
+  color: #103b2d;
+}
+
+.insights,
+.insights * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.insights-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.insights-head {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 48px;
+}
+
+.insights-head-main {
+  min-width: 0;
+}
+
+.insights-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 22px;
+}
+
+.insights-eyebrow span {
+  width: 36px;
+  height: 1px;
+
+  background: #b08d42;
+}
+
+.insights-eyebrow p {
+  margin: 0;
+
+  color: #9d7833;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.insights-head h2 {
+  margin: 0;
+
+  color: #103b2d;
+
+   
+
+  font-size: clamp(58px, 6.6vw, 96px);
+  font-weight: 400;
+
+  letter-spacing: -0.065em;
+  line-height: 0.86;
+}
+
+.insights-head h2 em {
+  color: #b08d42;
+  font-style: italic;
+}
+
+.insights-intro {
+  padding: 10px;
+  padding-bottom: 3px;
+}
+
+.insights-intro > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #b08d42;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.insights-intro p {
+  max-width: 340px;
+
+  margin: 0;
+
+  color: #737b76;
+
+   
+  font-size: 10px;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.insight-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.insight-card {
+  min-width: 0;
+}
+
+.insight {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  color: #103b2d;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.insight-img {
+  position: relative;
+
+  width: 100%;
+  height: 305px;
+
+  overflow: hidden;
+
+  background: #ddd5c6;
+}
+
+.insight-img img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter:
+    saturate(0.58)
+    contrast(1.05);
+
+  transform: scale(1.015);
+
+  transition:
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.65s ease;
+}
+
+.insight:hover .insight-img img {
+  transform: scale(1.06);
+
+  filter:
+    saturate(0.78)
+    contrast(1.05);
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.insight-img-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 42, 31, 0.03) 20%,
+      rgba(8, 42, 31, 0.08) 48%,
+      rgba(8, 42, 31, 0.72) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.insight-img::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border: 1px solid rgba(214, 182, 99, 0.42);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.insight-number {
+  position: absolute;
+  z-index: 3;
+
+  top: 17px;
+  left: 17px;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  background: #d1ae60;
+
+  color: #103b2d;
+
+   
+  font-size: 12px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.insight:hover .insight-number {
+  transform: translateY(-2px);
+
+  background: #d9bb72;
+}
+
+/* =========================================================
+   IMAGE LABEL
+========================================================= */
+
+.insight-image-label {
+  position: absolute;
+  z-index: 3;
+
+  top: 21px;
+  right: 20px;
+
+  color: rgba(250, 246, 236, 0.72);
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+/* =========================================================
+   IMAGE ARROW
+========================================================= */
+
+.insight-arrow {
+  position: absolute;
+  z-index: 3;
+
+  right: 18px;
+  bottom: 18px;
+
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(214, 182, 99, 0.6);
+
+  color: #d6b663;
+
+  font-size: 14px;
+
+  opacity: 0;
+
+  transform: translateY(7px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.insight:hover .insight-arrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.insight-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 16px;
+}
+
+.insight-category {
+  color: #b08d42;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.insight-read {
+  color: #8a908b;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.insight h3 {
+  max-width: 390px;
+
+  margin: 10px 0 17px;
+
+  color: #103b2d;
+
+   
+
+  font-size: clamp(24px, 2.35vw, 32px);
+  font-weight: 400;
+
+  letter-spacing: -0.035em;
+
+  line-height: 1.08;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.insight:hover h3 {
+  color: #174936;
+
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   BOTTOM ROW
+========================================================= */
+
+.insight-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: auto;
+
+  padding-top: 13px;
+
+  border-top: 1px solid rgba(16, 59, 45, 0.14);
+}
+
+.insight-bottom > span:first-child {
+  color: #858c87;
+
+   
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+}
+
+.insight-read-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #103b2d;
+
+   
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.insight-read-link b {
+  color: #b08d42;
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.insight:hover .insight-read-link {
+  color: #b08d42;
+
+  gap: 10px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.insights-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 42px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(16, 59, 45, 0.14);
+}
+
+.insights-footer > span {
+  color: #7c837e;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.insights-footer a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #103b2d;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.insights-footer a:hover {
+  color: #b08d42;
+
+  gap: 14px;
+}
+
+.insights-footer b {
+  color: #b08d42;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .insights {
+    padding: 90px 0 85px;
+  }
+
+  .insights-head {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.55fr);
+
+    gap: 45px;
+
+    margin-bottom: 42px;
+  }
+
+  .insights-head h2 {
+    font-size: clamp(52px, 6.5vw, 78px);
+  }
+
+  .insight-grid {
+    gap: 18px;
+  }
+
+  .insight-img {
+    height: 260px;
+  }
+
+  .insight h3 {
+    font-size: 25px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+  .insights {
+    padding: 70px 0 70px;
+  }
+
+  .insights-head {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    margin-bottom: 38px;
+  }
+
+  .insights-head h2 {
+    font-size: 55px;
+
+    line-height: 0.87;
+  }
+
+  .insights-intro {
+    padding-bottom: 0;
+  }
+
+  .insights-intro p {
+    max-width: 450px;
+
+    font-size: 10px;
+  }
+
+  .insight-grid {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+  .insight-img {
+    height: 365px;
+  }
+
+  .insight h3 {
+    max-width: 560px;
+
+    font-size: 29px;
+  }
+
+  .insight-arrow {
+    opacity: 1;
+
+    transform: none;
+  }
+
+  .insights-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 38px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .insights {
+    padding: 58px 0 62px;
+  }
+
+  .insights-head {
+    gap: 21px;
+
+    margin-bottom: 32px;
+  }
+
+  .insights-eyebrow {
+    margin-bottom: 17px;
+  }
+
+  .insights-head h2 {
+    font-size: 47px;
+
+    line-height: 0.88;
+  }
+
+  .insights-intro p {
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+  .insight-grid {
+    gap: 35px;
+  }
+
+  .insight-img {
+    height: 300px;
+  }
+
+  .insight-img::after {
+    inset: 10px;
+  }
+
+  .insight-number {
+    top: 14px;
+    left: 14px;
+
+    width: 35px;
+    height: 35px;
+
+    font-size: 11px;
+  }
+
+  .insight-image-label {
+    top: 18px;
+    right: 17px;
+  }
+
+  .insight-arrow {
+    right: 15px;
+    bottom: 15px;
+
+    width: 34px;
+    height: 34px;
+  }
+
+  .insight-meta {
+    margin-top: 13px;
+  }
+
+  .insight h3 {
+    margin: 8px 0 14px;
+
+    font-size: 27px;
+
+    line-height: 1.07;
+  }
+
+  .insight-bottom {
+    padding-top: 11px;
+  }
+
+  .insights-footer {
+    margin-top: 32px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .insights {
+    padding: 50px 0 56px;
+  }
+
+  .insights-head h2 {
+    font-size: 42px;
+  }
+
+  .insight-img {
+    height: 275px;
+  }
+
+  .insight h3 {
+    font-size: 25px;
+  }
+}

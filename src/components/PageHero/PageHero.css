@@ -1,0 +1,342 @@
+.page-hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 175px 0 95px;
+
+  background: #082e23;
+  color: #f5f0e5;
+}
+
+/* =========================
+   BACKGROUND PATTERN
+========================= */
+
+.page-hero-pattern {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.055;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   GOLD CIRCLES
+========================= */
+
+.page-hero-glow {
+  position: absolute;
+
+  border: 1px solid rgba(211, 178, 91, 0.18);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.page-hero-glow-one {
+  width: 620px;
+  height: 620px;
+
+  right: -250px;
+  top: -290px;
+
+  animation: pageHeroRotate 35s linear infinite;
+}
+
+.page-hero-glow-two {
+  width: 380px;
+  height: 380px;
+
+  right: -110px;
+  top: -170px;
+
+  border-color: rgba(211, 178, 91, 0.1);
+
+  animation: pageHeroRotateReverse 25s linear infinite;
+}
+
+@keyframes pageHeroRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pageHeroRotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* =========================
+   SIDE BRAND
+========================= */
+
+.page-hero-side {
+  position: absolute;
+
+  right: 30px;
+  top: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  transform: translateY(-50%) rotate(90deg);
+
+  color: rgba(245, 240, 229, 0.28);
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+
+  pointer-events: none;
+}
+
+.page-hero-side span:last-child {
+  color: rgba(211, 178, 91, 0.55);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.page-hero-container {
+  position: relative;
+  z-index: 3;
+}
+
+.page-hero-content {
+  max-width: 1050px;
+}
+
+/* =========================
+   EYEBROW
+========================= */
+
+.page-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.page-hero-eyebrow span {
+  width: 40px;
+  height: 1px;
+
+  background: #d2b264;
+}
+
+.page-hero-eyebrow p {
+  margin: 0;
+
+  color: #d2b264;
+
+   
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.page-hero h1 {
+  max-width: 1000px;
+
+  margin: 28px 0 38px;
+
+   
+  font-size: clamp(65px, 9vw, 115px);
+  font-weight: 400;
+
+  letter-spacing: -0.065em;
+  line-height: 0.84;
+}
+
+/*
+  Supports:
+  <span>Digital precision.</span>
+*/
+
+.page-hero h1 span {
+  color: #d2b264;
+  font-style: italic;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.page-hero-bottom {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 620px) 30px;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.page-hero-line {
+  width: 40px;
+  height: 1px;
+
+  background: rgba(211, 178, 91, 0.55);
+}
+
+.page-hero-bottom p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: rgba(245, 240, 229, 0.55);
+
+   
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.page-hero-mark {
+  color: #d2b264;
+  font-size: 15px;
+}
+
+/* =========================
+   PAGE NUMBER
+========================= */
+
+.page-hero-number {
+  position: absolute;
+
+  right: 35px;
+  bottom: 30px;
+
+  color: rgba(211, 178, 91, 0.55);
+
+   
+  font-size: 13px;
+
+  z-index: 3;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .page-hero {
+    min-height: 480px;
+
+    padding: 150px 0 80px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(58px, 10vw, 92px);
+  }
+
+  .page-hero-side {
+    right: 10px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .page-hero {
+    min-height: 500px;
+
+    padding: 135px 0 70px;
+  }
+
+  .page-hero h1 {
+    margin: 24px 0 30px;
+
+    font-size: clamp(48px, 14vw, 70px);
+    line-height: 0.88;
+  }
+
+  .page-hero-bottom {
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+  }
+
+  .page-hero-line {
+    width: 28px;
+  }
+
+  .page-hero-bottom p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .page-hero-mark {
+    display: none;
+  }
+
+  .page-hero-side {
+    display: none;
+  }
+
+  .page-hero-number {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .page-hero-glow-one {
+    width: 430px;
+    height: 430px;
+
+    right: -240px;
+    top: -180px;
+  }
+
+  .page-hero-glow-two {
+    width: 270px;
+    height: 270px;
+
+    right: -130px;
+    top: -100px;
+  }
+}

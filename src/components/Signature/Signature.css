@@ -1,0 +1,696 @@
+/* =========================================================
+   SIGNATURE / NYVORA METHOD
+========================================================= */
+
+.signature {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 28px 0 20px;
+  background: #f4efe4;
+  color: #103b2d;
+}
+
+.signature,
+.signature * {
+  box-sizing: border-box;
+}
+
+.signature h2,
+.signature h3,
+.signature p {
+  margin-top: 0;
+}
+
+/* =========================================================
+   BACKGROUND DETAIL
+========================================================= */
+
+.signature-bg {
+  position: absolute;
+  left: -170px;
+  bottom: -170px;
+  width: 430px;
+  height: 430px;
+  color: transparent;
+  font-size: 0;
+  border: 1px solid rgba(16, 59, 45, 0.035);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.signature-bg::before {
+  content: "";
+  position: absolute;
+  inset: 32px;
+  border: 1px solid rgba(16, 59, 45, 0.025);
+  border-radius: 50%;
+}
+
+.signature-bg::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 430px;
+  background: rgba(176, 141, 66, 0.035);
+  transform: translate(-50%, -50%);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.signature-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.signature-header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin: 0 0 48px;
+  padding: 0;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.signature-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 21px;
+}
+
+.signature-label span {
+  display: block;
+  width: 38px;
+  height: 1px;
+  flex-shrink: 0;
+  background: #c1a053;
+}
+
+.signature-label p {
+  margin: 0;
+  color: #9e7d37;
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HEADING AREA
+========================================================= */
+
+.signature-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.44fr);
+  gap: 65px;
+  align-items: end;
+  width: 100%;
+}
+
+.signature-heading h2 {
+  margin: 0;
+  color: #103b2d;
+   
+  font-size: clamp(60px, 7vw, 105px);
+  font-weight: 400;
+  letter-spacing: -0.068em;
+  line-height: 0.84;
+}
+
+.signature-heading h2 em {
+  color: #b08d42;
+  font-style: italic;
+}
+
+/* =========================================================
+   INTRO COPY
+========================================================= */
+
+.signature-intro {
+  width: 100%;
+  max-width: 365px;
+  padding-bottom: 3px;
+}
+
+.signature-intro > span {
+  display: block;
+  margin: 0 0 13px;
+  color: #b08d42;
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.signature-intro p {
+  max-width: 360px;
+  margin: 0;
+  color: #6d766f;
+   
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   METHOD LIST
+========================================================= */
+
+.signature-list {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(16, 59, 45, 0.15);
+}
+
+/* =========================================================
+   METHOD ROW
+========================================================= */
+
+.signature-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 68px minmax(190px, 0.72fr) minmax(250px, 1fr) 40px;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  min-height: 96px;
+  margin: 0;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(16, 59, 45, 0.13);
+  transition:
+    padding 0.35s ease,
+    background 0.35s ease;
+}
+
+/* =========================================================
+   HOVER PANEL
+========================================================= */
+
+.signature-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #103b2d;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.signature-row > * {
+  position: relative;
+  z-index: 2;
+}
+
+.signature-row:hover {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.signature-row:hover::before {
+  transform: scaleY(1);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.signature-number {
+  display: flex;
+  align-items: center;
+}
+
+.signature-number span {
+  color: #b08d42;
+   
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.signature-title {
+  min-width: 0;
+}
+
+.signature-title h3 {
+  margin: 0;
+  color: #103b2d;
+   
+  font-size: clamp(27px, 3vw, 43px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.signature-row:hover .signature-title h3 {
+  color: #f5f0e5;
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.signature-description {
+  min-width: 0;
+}
+
+.signature-description p {
+  max-width: 430px;
+  margin: 0;
+  color: #707973;
+   
+  font-size: 10px;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.signature-row:hover .signature-description p {
+  color: rgba(245, 240, 230, 0.58);
+}
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.signature-arrow {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  border: 1px solid rgba(176, 141, 66, 0.3);
+  color: #b08d42;
+   
+  font-size: 13px;
+  line-height: 1;
+  transform: translateX(-5px);
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.signature-row:hover .signature-arrow {
+  color: #d5b76a;
+  border-color: rgba(213, 183, 106, 0.5);
+  background: rgba(213, 183, 106, 0.07);
+  transform: translateX(0);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.signature-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 23px 0 0;
+  padding: 0;
+}
+
+.signature-footer-mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.signature-footer-mark span {
+  color: #b08d42;
+   
+  font-size: 17px;
+  line-height: 1;
+}
+
+.signature-footer-mark p {
+  margin: 0;
+  color: #777f79;
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.signature-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 19px;
+  min-height: 47px;
+  margin: 0;
+  padding: 0 7px 0 19px;
+  color: #f5f0e5;
+  background: #103b2d;
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.signature-button:hover {
+  transform: translateY(-3px);
+  background: #174936;
+}
+
+.signature-button b {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  color: #d3b469;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .signature {
+    padding: 70px 0 72px;
+  }
+
+  .signature-heading {
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 0.5fr);
+    gap: 45px;
+  }
+
+  .signature-heading h2 {
+    font-size: clamp(55px, 7vw, 84px);
+  }
+
+  .signature-row {
+    grid-template-columns:
+      55px
+      minmax(165px, 0.8fr)
+      minmax(190px, 1fr)
+      34px;
+    gap: 18px;
+    min-height: 92px;
+  }
+
+  .signature-title h3 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .signature {
+    padding: 62px 0 62px;
+  }
+
+  .signature-header {
+    margin-bottom: 42px;
+  }
+
+  .signature-heading {
+    grid-template-columns: 1fr 0.65fr;
+    gap: 32px;
+  }
+
+  .signature-heading h2 {
+    font-size: clamp(52px, 7vw, 74px);
+  }
+
+  .signature-row {
+    grid-template-columns:
+      45px
+      minmax(145px, 1fr)
+      minmax(150px, 1fr)
+      30px;
+    gap: 13px;
+    min-height: 88px;
+    padding: 15px 0;
+  }
+
+  .signature-title h3 {
+    font-size: 26px;
+  }
+
+  .signature-description p {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+  .signature {
+    padding: 55px 0 50px;
+  }
+
+  .signature-bg {
+    width: 300px;
+    height: 300px;
+    left: -165px;
+    bottom: -90px;
+  }
+
+  .signature-header {
+    margin-bottom: 38px;
+  }
+
+  .signature-label {
+    margin-bottom: 18px;
+  }
+
+  .signature-heading {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .signature-heading h2 {
+    font-size: clamp(47px, 13vw, 61px);
+    line-height: 0.87;
+  }
+
+  .signature-intro {
+    max-width: 520px;
+    padding: 0;
+  }
+
+  .signature-intro p {
+    max-width: 520px;
+    font-size: 11px;
+    line-height: 1.75;
+  }
+
+  /* ROW */
+
+  .signature-row {
+    grid-template-columns: 40px minmax(0, 1fr) 30px;
+    gap: 13px;
+    min-height: 0;
+    padding: 17px 0;
+  }
+
+  .signature-row:hover {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .signature-number {
+    align-self: start;
+    padding-top: 3px;
+  }
+
+  .signature-number span {
+    font-size: 15px;
+  }
+
+  .signature-title h3 {
+    font-size: 26px;
+  }
+
+  .signature-description {
+    grid-column: 2 / 3;
+    margin-top: 0;
+  }
+
+  .signature-description p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .signature-arrow {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    width: 28px;
+    height: 28px;
+    transform: none;
+    opacity: 1;
+  }
+
+  .signature-row:hover .signature-arrow {
+    transform: none;
+  }
+
+  /* FOOTER */
+
+  .signature-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 19px;
+    margin-top: 21px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+  .signature {
+    padding: 48px 0 42px;
+  }
+
+  .signature-bg {
+    display: none;
+  }
+
+  .signature-heading h2 {
+    font-size: 45px;
+    line-height: 0.88;
+  }
+
+  .signature-intro p {
+    font-size: 12px;
+  }
+
+  .signature-row {
+    grid-template-columns: 31px minmax(0, 1fr) 27px;
+    gap: 9px;
+    padding: 15px 0;
+  }
+
+  .signature-number span {
+    font-size: 14px;
+  }
+
+  .signature-title h3 {
+    font-size: 24px;
+  }
+
+  .signature-description p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .signature-arrow {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+
+  .signature-footer-mark {
+    gap: 9px;
+  }
+
+  .signature-footer-mark span {
+    font-size: 15px;
+  }
+
+  .signature-footer-mark p {
+    font-size: 11px;
+  }
+
+  .signature-button {
+    min-height: 45px;
+    padding-left: 16px;
+    font-size: 11px;
+  }
+
+  .signature-button b {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .signature {
+    padding: 43px 0 36px;
+  }
+
+  .signature-heading h2 {
+    font-size: 41px;
+  }
+
+  .signature-title h3 {
+    font-size: 22px;
+  }
+
+  .signature-row {
+    grid-template-columns: 28px minmax(0, 1fr) 25px;
+    gap: 8px;
+  }
+
+  .signature-description p {
+    font-size: 7.8px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .signature *,
+  .signature *::before,
+  .signature *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

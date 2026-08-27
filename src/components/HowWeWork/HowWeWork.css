@@ -1,0 +1,569 @@
+/* =========================================================
+   HOW WE WORK / PROCESS
+========================================================= */
+
+.process {
+  position: relative;
+  overflow: hidden;
+  padding: 82px 0 42px;
+  background: #f4efe4;
+  color: #103b2d;
+}
+
+/* =========================================================
+   BACKGROUND DETAIL
+========================================================= */
+
+.process-bg-detail {
+  position: absolute;
+  right: -110px;
+  bottom: -130px;
+  width: 430px;
+  height: 430px;
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.process-detail-circle {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(16, 59, 45, 0.035);
+  border-radius: 50%;
+}
+
+.process-detail-circle::before {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  border: 1px solid rgba(16, 59, 45, 0.025);
+  border-radius: 50%;
+}
+
+.process-detail-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 430px;
+  background: rgba(176, 141, 66, 0.04);
+  transform: translate(-50%, -50%);
+}
+
+.process-detail-line {
+  position: absolute;
+  height: 1px;
+  background: rgba(176, 141, 66, 0.045);
+}
+
+.process-detail-line-one {
+  right: 0;
+  bottom: 215px;
+  width: 430px;
+}
+
+.process-detail-line-two {
+  right: 215px;
+  bottom: 215px;
+  width: 230px;
+  transform: rotate(90deg);
+}
+
+.process-detail-mark {
+  position: absolute;
+  right: 18px;
+  bottom: 212px;
+  color: rgba(16, 59, 45, 0.07);
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  transform: translateY(50%);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.process-head {
+  position: relative;
+  z-index: 2;
+}
+
+.process-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.process-eyebrow span {
+  width: 38px;
+  height: 1px;
+  flex-shrink: 0;
+  background: #bd9b4e;
+}
+
+.process-eyebrow p {
+  margin: 0;
+  color: #a07e38;
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.process-heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(250px, 0.42fr);
+  gap: 65px;
+  align-items: end;
+}
+
+.process-heading-row h2 {
+  max-width: 1050px;
+  margin: 0;
+  color: #103b2d;
+   
+  font-size: clamp(60px, 7vw, 106px);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.84;
+}
+
+.process-heading-row h2 em {
+  color: #b08d42;
+  font-style: italic;
+}
+
+.process-intro {
+  max-width: 380px;
+  padding-bottom: 3px;
+}
+
+.process-intro > span {
+  display: block;
+  margin-bottom: 13px;
+  color: #b08d42;
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.process-intro p {
+  max-width: 365px;
+  margin: 0;
+  color: #707972;
+   
+  font-size: 11px;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   PROCESS TRACK
+========================================================= */
+
+.process-track {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 48px;
+}
+
+/* =========================================================
+   CONNECTING LINE
+========================================================= */
+
+.process-line {
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  right: 34px;
+  height: 1px;
+  background: rgba(16, 59, 45, 0.13);
+}
+
+.process-line span {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #c5a457 0%,
+    rgba(197, 164, 87, 0.65) 55%,
+    rgba(197, 164, 87, 0.25) 100%
+  );
+  opacity: 0.72;
+}
+
+/* =========================================================
+   STEP
+========================================================= */
+
+.process-step {
+  position: relative;
+  min-height: 0;
+  padding: 0 15px 18px;
+  border-bottom: 1px solid rgba(16, 59, 45, 0.11);
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.process-step:hover {
+  background: rgba(16, 59, 45, 0.018);
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   NODE
+========================================================= */
+
+.process-node {
+  position: relative;
+  z-index: 3;
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c5a457;
+  border-radius: 50%;
+  background: #f4efe4;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.process-node::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(197, 164, 87, 0.25);
+  border-radius: 50%;
+}
+
+.process-node span {
+  position: relative;
+  z-index: 2;
+  color: #103b2d;
+   
+  font-size: 15px;
+}
+
+.process-step:hover .process-node {
+  background: #d2b266;
+  box-shadow: 0 8px 24px rgba(16, 59, 45, 0.08);
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.process-content {
+  padding-top: 23px;
+}
+
+.process-small {
+  display: block;
+  margin-bottom: 8px;
+  color: #b08d42;
+   
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.process-content h3 {
+  margin: 0;
+  color: #123d2e;
+   
+  font-size: clamp(25px, 2.25vw, 33px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.process-content p {
+  max-width: 190px;
+  margin: 9px 0 0;
+  color: #737b76;
+   
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.process-arrow {
+  position: absolute;
+  right: 15px;
+  bottom: 14px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(176, 141, 66, 0.3);
+  color: #b08d42;
+  font-size: 12px;
+  opacity: 0;
+  transform: translate(-5px, 4px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.process-step:hover .process-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .process {
+    padding: 75px 0 42px;
+  }
+
+  .process-heading-row {
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 0.48fr);
+    gap: 45px;
+  }
+
+  .process-heading-row h2 {
+    font-size: clamp(55px, 7vw, 82px);
+  }
+
+  .process-track {
+    gap: 8px;
+    margin-top: 45px;
+  }
+
+  .process-step {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .process-node {
+    width: 58px;
+    height: 58px;
+  }
+
+  .process-line {
+    left: 29px;
+    right: 29px;
+    top: 29px;
+  }
+
+  .process-content {
+    padding-top: 21px;
+  }
+
+  .process-content h3 {
+    font-size: 26px;
+  }
+
+  .process-content p {
+    font-size: 11px;
+  }
+
+  .process-arrow {
+    right: 8px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+  .process {
+    padding: 60px 0 38px;
+  }
+
+  .process-bg-detail {
+    right: -150px;
+    bottom: -80px;
+    width: 330px;
+    height: 330px;
+    opacity: 0.3;
+  }
+
+  .process-heading-row {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .process-heading-row h2 {
+    font-size: clamp(48px, 13vw, 64px);
+    line-height: 0.87;
+  }
+
+  .process-intro {
+    max-width: 520px;
+    padding-bottom: 0;
+  }
+
+  .process-intro p {
+    max-width: 520px;
+    font-size: 10px;
+    line-height: 1.75;
+  }
+
+  /* TIMELINE */
+
+  .process-track {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 38px;
+  }
+
+  .process-line {
+    top: 29px;
+    bottom: 23px;
+    left: 28px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .process-line span {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      #c5a457 0%,
+      rgba(197, 164, 87, 0.3) 100%
+    );
+  }
+
+  /* STEP */
+
+  .process-step {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    column-gap: 18px;
+    padding: 0 0 28px;
+    border-bottom: none;
+  }
+
+  .process-step:hover {
+    background: transparent;
+    transform: none;
+  }
+
+  .process-node {
+    width: 58px;
+    height: 58px;
+  }
+
+  .process-content {
+    padding-top: 2px;
+  }
+
+  .process-content h3 {
+    font-size: 29px;
+  }
+
+  .process-content p {
+    max-width: 500px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .process-arrow {
+    position: static;
+    grid-column: 2;
+    width: 27px;
+    height: 27px;
+    margin-top: 9px;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .process {
+    padding: 52px 0 32px;
+  }
+
+  .process-bg-detail {
+    display: none;
+  }
+
+  .process-heading-row h2 {
+    font-size: 46px;
+  }
+
+  .process-intro p {
+    font-size: 11px;
+  }
+
+  .process-track {
+    margin-top: 34px;
+  }
+
+  .process-line {
+    left: 25px;
+  }
+
+  .process-step {
+    grid-template-columns: 52px minmax(0, 1fr);
+    column-gap: 15px;
+    padding-bottom: 25px;
+  }
+
+  .process-node {
+    width: 52px;
+    height: 52px;
+  }
+
+  .process-content h3 {
+    font-size: 25px;
+  }
+
+  .process-content p {
+    font-size: 11px;
+  }
+
+  .process-arrow {
+    width: 25px;
+    height: 25px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .process *,
+  .process *::before,
+  .process *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

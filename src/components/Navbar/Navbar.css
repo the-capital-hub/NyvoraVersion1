@@ -1,0 +1,787 @@
+/* =========================================================
+   NYVORA — NAVBAR
+   Premium Indian Law Firm Navigation
+========================================================= */
+
+.nav {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  padding: 20px 0;
+
+  background: transparent;
+
+  color: #f7f2e8;
+
+  transition:
+    padding 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+
+/* =========================================================
+   SCROLLED NAVBAR
+========================================================= */
+
+.nav-scrolled {
+  padding: 11px 0;
+
+  background: rgba(8, 46, 35, 0.96);
+
+  border-bottom: 1px solid rgba(211, 179, 107, 0.14);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.nav-inner {
+  width: min(1180px, calc(100% - 56px));
+
+  min-height: 56px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color: #f7f2e8;
+
+  text-decoration: none;
+
+  transition: opacity 0.25s ease;
+}
+
+.brand:hover {
+  color: #f7f2e8;
+
+  opacity: 0.9;
+
+  text-decoration: none;
+}
+
+
+/* LOGO SYMBOL */
+
+.brand-symbol {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(211, 179, 107, 0.72);
+
+  color: #d3b36b;
+
+  
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+
+/* BRAND TEXT */
+
+.brand-copy {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.brand-copy strong {
+  color: #f7f2e8;
+
+  
+
+  font-size: 25px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+
+  line-height: 0.82;
+}
+
+.brand-copy small {
+  color: rgba(247, 242, 232, 0.46);
+
+  margin-top: 2px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 7px;
+
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   NORMAL NAV LINKS
+========================================================= */
+
+.nav-item {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 37px;
+
+  padding: 0 12px;
+
+  border: 1px solid transparent;
+
+  color: rgba(247, 242, 232, 0.68);
+
+  
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.10em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* REMOVE DEFAULT LINK DECORATION */
+
+.nav-item:hover,
+.nav-item:visited,
+.nav-item:active {
+  text-decoration: none;
+}
+
+
+/* HOVER */
+
+.nav-item:hover {
+  color: #f7f2e8;
+
+  border-color: rgba(211, 179, 107, 0.32);
+
+  background: rgba(211, 179, 107, 0.04);
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+========================================================= */
+
+.nav-item.active {
+  color: #f7f2e8;
+
+  border-color: rgba(211, 179, 107, 0.72);
+
+  background: rgba(211, 179, 107, 0.07);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(211, 179, 107, 0.04);
+}
+
+
+/* ACTIVE SMALL GOLD LINE */
+
+/* .nav-item.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 8px;
+  right: 8px;
+
+  bottom: -1px;
+
+  height: 1px;
+
+  background: #d3b36b;
+} */
+
+
+/* =========================================================
+   CONSULTATION BUTTON
+========================================================= */
+
+.nav-cta {
+  flex-shrink: 0;
+
+  display: inline-flex !important;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  min-height: 40px;
+
+  margin-left: 7px;
+
+  padding: 0 16px !important;
+
+  border: 1px solid rgba(211, 179, 107, 0.82);
+
+  background: rgba(177, 139, 62, 0.04);
+
+  color: #f7f2e8 !important;
+
+  
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  text-decoration: none !important;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-cta:hover {
+  background: #d3b36b;
+
+  border-color: #d3b36b;
+
+  color: #082e23 !important;
+
+  transform: translateY(-1px);
+
+  text-decoration: none !important;
+}
+
+.nav-cta b {
+  color: #d3b36b;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-cta:hover b {
+  color: #082e23;
+
+  transform: translate(2px, -2px);
+}
+
+
+/* CONSULTATION ACTIVE */
+
+.nav-cta.active {
+  background: #d3b36b;
+
+  border-color: #d3b36b;
+
+  color: #082e23 !important;
+}
+
+.nav-cta.active b {
+  color: #082e23;
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamb {
+  display: none;
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  margin-left: auto;
+
+  padding: 0;
+
+  border: 1px solid rgba(211, 179, 107, 0.35);
+
+  background: rgba(8, 46, 35, 0.15);
+
+  color: #f7f2e8;
+
+  cursor: pointer;
+}
+
+.hamb i {
+  position: absolute;
+
+  left: 10px;
+
+  width: 21px;
+  height: 1px;
+
+  background: currentColor;
+
+  transition:
+    top 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hamb i:first-child {
+  top: 16px;
+}
+
+.hamb i:last-child {
+  top: 25px;
+}
+
+
+/* HAMBURGER ACTIVE */
+
+.hamb.active i:first-child {
+  top: 21px;
+
+  transform: rotate(45deg);
+}
+
+.hamb.active i:last-child {
+  top: 21px;
+
+  transform: rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .nav-inner {
+    width: calc(100% - 42px);
+
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-item {
+    padding: 0 9px;
+
+    font-size: 11px;
+  }
+
+  .nav-cta {
+    padding: 0 13px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .nav {
+    padding: 16px 0;
+  }
+
+  .nav-scrolled {
+    padding: 9px 0;
+  }
+
+  .nav-inner {
+    width: calc(100% - 34px);
+
+    min-height: 52px;
+  }
+
+
+  /* SHOW HAMBURGER */
+
+  .hamb {
+    display: block;
+
+    z-index: 1101;
+  }
+
+
+  /* =====================================================
+     MOBILE NAV
+  ===================================================== */
+
+  .nav-links {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1100;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 0;
+
+    margin: 0;
+
+    padding:
+      105px
+      28px
+      30px;
+
+    overflow-y: auto;
+
+    background:
+      linear-gradient(
+        145deg,
+        #082e23 0%,
+        #06281f 100%
+      );
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-12px);
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.3s ease;
+  }
+
+
+  .nav-links.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+
+  /* MOBILE NORMAL LINK */
+
+  .nav-links .nav-item {
+    width: 100%;
+
+    min-height: 58px;
+
+    justify-content: flex-start;
+
+    padding: 15px 13px;
+
+    border: 1px solid transparent;
+
+    border-bottom-color:
+      rgba(247, 242, 232, 0.10);
+
+    color: rgba(247, 242, 232, 0.78);
+
+    
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    letter-spacing: 0;
+
+    text-transform: none;
+
+    line-height: 1;
+  }
+
+
+  /* MOBILE HOVER */
+
+  .nav-links .nav-item:hover {
+    color: #f7f2e8;
+
+    background: rgba(211, 179, 107, 0.04);
+
+    border-color:
+      rgba(211, 179, 107, 0.28);
+  }
+
+
+  /* MOBILE ACTIVE */
+
+  .nav-links .nav-item.active {
+    color: #f7f2e8;
+
+    border-color:
+      rgba(211, 179, 107, 0.70);
+
+    background:
+      rgba(211, 179, 107, 0.06);
+  }
+
+
+  .nav-links .nav-item.active::before {
+    left: 8px;
+    right: 8px;
+
+    bottom: -1px;
+  }
+
+
+  /* MOBILE CTA */
+
+  .nav-links .nav-cta {
+    width: 100%;
+
+    min-height: 54px !important;
+
+    justify-content: space-between;
+
+    margin:
+      22px 0 0;
+
+    padding:
+      0 17px !important;
+
+    border:
+      1px solid rgba(211, 179, 107, 0.78);
+
+    background:
+      rgba(211, 179, 107, 0.07);
+
+    color: #f7f2e8 !important;
+
+    
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.11em;
+
+    text-transform: uppercase;
+  }
+
+  .nav-links .nav-cta.active,
+  .nav-links .nav-cta:hover {
+    background: #d3b36b;
+
+    color: #082e23 !important;
+  }
+
+  .nav-links .nav-cta b {
+    font-size: 16px;
+  }
+
+
+  /* =====================================================
+     MOBILE BRAND
+  ===================================================== */
+
+  .brand-symbol {
+    width: 34px;
+    height: 34px;
+
+    font-size: 20px;
+  }
+
+  .brand-copy strong {
+    font-size: 23px;
+  }
+
+  .brand-copy small {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .nav-inner {
+    width: calc(100% - 26px);
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-symbol {
+    width: 32px;
+    height: 32px;
+
+    font-size: 18px;
+  }
+
+  .brand-copy strong {
+    font-size: 21px;
+  }
+
+  .brand-copy small {
+    font-size: 4.5px;
+
+    letter-spacing: 0.13em;
+  }
+
+  .hamb {
+    width: 41px;
+    height: 41px;
+  }
+
+  .nav-links {
+    padding:
+      92px
+      22px
+      25px;
+  }
+
+  .nav-links .nav-item {
+    min-height: 55px;
+
+    padding: 14px 11px;
+
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .brand-copy small {
+    display: none;
+  }
+
+  .brand-copy strong {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    padding:
+      88px
+      18px
+      22px;
+  }
+
+  .nav-links .nav-item {
+    font-size: 23px;
+  }
+}
+
+
+/* =========================================================
+   FINAL LINK RESET
+========================================================= */
+
+.nav a,
+.nav a:visited,
+.nav a:hover,
+.nav a:active {
+  text-decoration: none !important;
+}
