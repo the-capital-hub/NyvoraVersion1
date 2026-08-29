@@ -1,85 +1,164 @@
 /* =========================================================
-   HOW WE WORK / PROCESS
+   NEEM LEGAL — HOW WE WORK / PROCESS
+   Premium Legal Process Section
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
 ========================================================= */
 
 .process {
+  --process-green: #103b2d;
+  --process-green-dark: #082e23;
+
+  --process-cream: #f7f3ea;
+  --process-cream-light: #fbf9f4;
+
+  --process-gold: #b08d42;
+  --process-gold-light: #c5a457;
+
+  --process-gray: #737b76;
+
   position: relative;
+
   overflow: hidden;
-  padding: 82px 0 42px;
-  background: #f4efe4;
-  color: #103b2d;
+
+  padding: 105px 0 55px;
+
+  background: var(--process-cream);
+
+  color: var(--process-green);
 }
 
+
 /* =========================================================
-   BACKGROUND DETAIL
+   BACKGROUND DECORATION
 ========================================================= */
 
 .process-bg-detail {
   position: absolute;
-  right: -110px;
-  bottom: -130px;
-  width: 430px;
-  height: 430px;
+
+  right: -150px;
+  bottom: -155px;
+
+  width: 500px;
+  height: 500px;
+
   pointer-events: none;
-  opacity: 0.45;
+
+  opacity: 0.55;
 }
+
 
 .process-detail-circle {
   position: absolute;
+
   inset: 0;
-  border: 1px solid rgba(16, 59, 45, 0.035);
+
+  border:
+    1px solid rgba(16, 59, 45, 0.045);
+
   border-radius: 50%;
 }
+
 
 .process-detail-circle::before {
   content: "";
+
   position: absolute;
-  inset: 30px;
-  border: 1px solid rgba(16, 59, 45, 0.025);
+
+  inset: 38px;
+
+  border:
+    1px solid rgba(16, 59, 45, 0.035);
+
   border-radius: 50%;
 }
 
+
 .process-detail-circle::after {
   content: "";
+
   position: absolute;
+
   top: 50%;
   left: 50%;
+
   width: 1px;
-  height: 430px;
-  background: rgba(176, 141, 66, 0.04);
-  transform: translate(-50%, -50%);
+  height: 500px;
+
+  background:
+    rgba(176, 141, 66, 0.055);
+
+  transform:
+    translate(-50%, -50%);
 }
+
 
 .process-detail-line {
   position: absolute;
+
   height: 1px;
-  background: rgba(176, 141, 66, 0.045);
+
+  background:
+    rgba(176, 141, 66, 0.06);
 }
+
 
 .process-detail-line-one {
   right: 0;
-  bottom: 215px;
-  width: 430px;
+
+  bottom: 250px;
+
+  width: 500px;
 }
 
+
 .process-detail-line-two {
-  right: 215px;
-  bottom: 215px;
-  width: 230px;
+  right: 250px;
+
+  bottom: 250px;
+
+  width: 260px;
+
   transform: rotate(90deg);
 }
 
+
 .process-detail-mark {
   position: absolute;
-  right: 18px;
-  bottom: 212px;
-  color: rgba(16, 59, 45, 0.07);
-   
-  font-size: 11px;
+
+  right: 20px;
+
+  bottom: 247px;
+
+  color:
+    rgba(16, 59, 45, 0.075);
+
+  font-size: 10px;
+
   font-weight: 800;
+
   letter-spacing: 0.18em;
-  transform: translateY(50%);
+
+  white-space: nowrap;
+
+  transform:
+    translateY(50%);
 }
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.process-container {
+  position: relative;
+
+  z-index: 2;
+}
+
 
 /* =========================================================
    HEADER
@@ -87,85 +166,154 @@
 
 .process-head {
   position: relative;
+
   z-index: 2;
 }
 
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
 .process-eyebrow {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
-  margin-bottom: 20px;
+
+  margin-bottom: 24px;
 }
 
+
 .process-eyebrow span {
-  width: 38px;
+  width: 42px;
   height: 1px;
+
   flex-shrink: 0;
-  background: #bd9b4e;
+
+  background:
+    var(--process-gold-light);
 }
+
 
 .process-eyebrow p {
   margin: 0;
-  color: #a07e38;
-   
-  font-size: 11px;
+
+  color:
+    var(--process-gold);
+
+  font-size: 10px;
+
   font-weight: 800;
-  letter-spacing: 0.2em;
+
+  letter-spacing: 0.20em;
+
   line-height: 1;
+
   text-transform: uppercase;
 }
 
+
 /* =========================================================
-   HEADING
+   HEADING ROW
 ========================================================= */
 
 .process-heading-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(250px, 0.42fr);
-  gap: 65px;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(260px, 350px);
+
+  gap: 80px;
+
   align-items: end;
 }
 
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
 .process-heading-row h2 {
-  max-width: 1050px;
+  max-width: 900px;
+
   margin: 0;
-  color: #103b2d;
-   
-  font-size: clamp(60px, 7vw, 106px);
+
+  color:
+    var(--process-green);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(58px, 6.4vw, 94px);
+
   font-weight: 400;
-  letter-spacing: -0.065em;
-  line-height: 0.84;
+
+  letter-spacing:
+    -0.065em;
+
+  line-height:
+    0.88;
 }
 
+
 .process-heading-row h2 em {
-  color: #b08d42;
+  color:
+    var(--process-gold);
+
   font-style: italic;
 }
 
+
+/* =========================================================
+   INTRO
+========================================================= */
+
 .process-intro {
-  max-width: 380px;
-  padding-bottom: 3px;
+  max-width: 350px;
+
+  padding-bottom: 5px;
 }
+
 
 .process-intro > span {
   display: block;
-  margin-bottom: 13px;
-  color: #b08d42;
-   
-  font-size: 11px;
+
+  margin-bottom: 14px;
+
+  color:
+    var(--process-gold);
+
+  font-size: 9px;
+
   font-weight: 800;
+
   letter-spacing: 0.18em;
+
   line-height: 1;
+
+  text-transform: uppercase;
 }
 
+
 .process-intro p {
-  max-width: 365px;
+  max-width: 350px;
+
   margin: 0;
-  color: #707972;
-   
-  font-size: 11px;
-  line-height: 1.78;
+
+  color:
+    var(--process-gray);
+
+  font-size: 12px;
+
+  line-height: 1.8;
 }
+
 
 /* =========================================================
    PROCESS TRACK
@@ -173,12 +321,19 @@
 
 .process-track {
   position: relative;
+
   z-index: 2;
+
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 48px;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 0;
+
+  margin-top: 70px;
 }
+
 
 /* =========================================================
    CONNECTING LINE
@@ -186,123 +341,227 @@
 
 .process-line {
   position: absolute;
+
   top: 34px;
+
   left: 34px;
   right: 34px;
+
   height: 1px;
-  background: rgba(16, 59, 45, 0.13);
+
+  background:
+    rgba(16, 59, 45, 0.14);
+
+  pointer-events: none;
 }
+
 
 .process-line span {
   position: absolute;
+
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    #c5a457 0%,
-    rgba(197, 164, 87, 0.65) 55%,
-    rgba(197, 164, 87, 0.25) 100%
-  );
-  opacity: 0.72;
+
+  background:
+    linear-gradient(
+      90deg,
+      #c5a457 0%,
+      rgba(197, 164, 87, 0.72) 50%,
+      rgba(197, 164, 87, 0.20) 100%
+    );
+
+  opacity: 0.85;
 }
 
+
 /* =========================================================
-   STEP
+   PROCESS STEP
 ========================================================= */
 
 .process-step {
   position: relative;
-  min-height: 0;
-  padding: 0 15px 18px;
-  border-bottom: 1px solid rgba(16, 59, 45, 0.11);
+
+  min-width: 0;
+
+  padding:
+    0 18px 24px;
+
+  border-bottom:
+    1px solid rgba(16, 59, 45, 0.11);
+
   transition:
-    background 0.35s ease,
-    transform 0.35s ease;
+    background 0.3s ease,
+    transform 0.3s ease;
 }
+
+
+.process-step:first-of-type {
+  padding-left: 0;
+}
+
+
+.process-step:last-child {
+  padding-right: 0;
+}
+
 
 .process-step:hover {
-  background: rgba(16, 59, 45, 0.018);
-  transform: translateY(-4px);
+  transform:
+    translateY(-5px);
+
+  background:
+    rgba(16, 59, 45, 0.018);
 }
 
+
 /* =========================================================
-   NODE
+   NUMBER NODE
 ========================================================= */
 
 .process-node {
   position: relative;
+
   z-index: 3;
+
   width: 68px;
   height: 68px;
+
   display: grid;
+
   place-items: center;
-  border: 1px solid #c5a457;
+
+  border:
+    1px solid var(--process-gold-light);
+
   border-radius: 50%;
-  background: #f4efe4;
+
+  background:
+    var(--process-cream);
+
   transition:
     transform 0.35s ease,
     background 0.35s ease,
     box-shadow 0.35s ease;
 }
 
+
 .process-node::before {
   content: "";
+
   position: absolute;
+
   inset: 5px;
-  border: 1px solid rgba(197, 164, 87, 0.25);
+
+  border:
+    1px solid rgba(197, 164, 87, 0.30);
+
   border-radius: 50%;
 }
 
+
 .process-node span {
   position: relative;
+
   z-index: 2;
-  color: #103b2d;
-   
-  font-size: 15px;
+
+  color:
+    var(--process-green);
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
 }
 
+
 .process-step:hover .process-node {
-  background: #d2b266;
-  box-shadow: 0 8px 24px rgba(16, 59, 45, 0.08);
-  transform: scale(1.06);
+  background:
+    var(--process-gold-light);
+
+  box-shadow:
+    0 10px 25px
+    rgba(16, 59, 45, 0.10);
+
+  transform:
+    scale(1.06);
 }
+
+
+.process-step:hover .process-node span {
+  color:
+    var(--process-green-dark);
+}
+
 
 /* =========================================================
    CONTENT
 ========================================================= */
 
 .process-content {
-  padding-top: 23px;
+  padding-top: 24px;
 }
+
 
 .process-small {
   display: block;
-  margin-bottom: 8px;
-  color: #b08d42;
-   
-  font-size: 11px;
+
+  margin-bottom: 9px;
+
+  color:
+    var(--process-gold);
+
+  font-size: 9px;
+
   font-weight: 800;
-  letter-spacing: 0.18em;
+
+  letter-spacing: 0.17em;
+
   line-height: 1;
+
+  text-transform: uppercase;
 }
+
 
 .process-content h3 {
   margin: 0;
-  color: #123d2e;
-   
-  font-size: clamp(25px, 2.25vw, 33px);
+
+  color:
+    var(--process-green);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(24px, 2vw, 31px);
+
   font-weight: 400;
-  letter-spacing: -0.025em;
+
+  letter-spacing:
+    -0.025em;
+
   line-height: 1;
 }
 
+
 .process-content p {
-  max-width: 190px;
-  margin: 9px 0 0;
-  color: #737b76;
-   
-  font-size: 12px;
-  line-height: 1.65;
+  max-width: 180px;
+
+  margin: 11px 0 0;
+
+  color:
+    var(--process-gray);
+
+  font-size: 11px;
+
+  line-height: 1.7;
 }
+
 
 /* =========================================================
    ARROW
@@ -310,260 +569,620 @@
 
 .process-arrow {
   position: absolute;
-  right: 15px;
-  bottom: 14px;
-  width: 28px;
-  height: 28px;
+
+  right: 18px;
+
+  bottom: 13px;
+
+  width: 27px;
+  height: 27px;
+
   display: grid;
+
   place-items: center;
-  border: 1px solid rgba(176, 141, 66, 0.3);
-  color: #b08d42;
+
+  border:
+    1px solid rgba(176, 141, 66, 0.30);
+
+  color:
+    var(--process-gold);
+
   font-size: 12px;
+
   opacity: 0;
-  transform: translate(-5px, 4px);
+
+  transform:
+    translate(-5px, 4px);
+
   transition:
     opacity 0.25s ease,
     transform 0.25s ease;
 }
 
+
+.process-step:last-child .process-arrow {
+  right: 0;
+}
+
+
 .process-step:hover .process-arrow {
   opacity: 1;
-  transform: translate(0, 0);
+
+  transform:
+    translate(0, 0);
 }
+
+
+/* =========================================================
+   FOOTER LABEL
+========================================================= */
+
+.process-footer-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 65px;
+}
+
+
+.process-footer-label span {
+  width: 40px;
+  height: 1px;
+
+  background:
+    var(--process-gold-light);
+}
+
+
+.process-footer-label p {
+  margin: 0;
+
+  color:
+    var(--process-gold);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .process {
+    padding:
+      90px 0 50px;
+  }
+
+
+  .process-heading-row {
+    gap: 50px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(240px, 310px);
+  }
+
+
+  .process-heading-row h2 {
+    font-size:
+      clamp(52px, 6.8vw, 78px);
+  }
+
+
+  .process-track {
+    margin-top: 58px;
+  }
+
+
+  .process-step {
+    padding:
+      0 12px 22px;
+  }
+
+
+  .process-node {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .process-line {
+    top: 30px;
+
+    left: 30px;
+    right: 30px;
+  }
+
+
+  .process-content {
+    padding-top: 20px;
+  }
+
+
+  .process-content h3 {
+    font-size: 25px;
+  }
+
+
+  .process-content p {
+    font-size: 10.5px;
+  }
+}
+
 
 /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
+
   .process {
-    padding: 75px 0 42px;
+    padding:
+      80px 0 48px;
   }
+
 
   .process-heading-row {
-    grid-template-columns: minmax(0, 1fr) minmax(230px, 0.48fr);
-    gap: 45px;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(220px, 280px);
+
+    gap: 35px;
   }
+
 
   .process-heading-row h2 {
-    font-size: clamp(55px, 7vw, 82px);
+    font-size:
+      clamp(48px, 7vw, 65px);
   }
+
+
+  .process-intro p {
+    font-size: 11px;
+  }
+
+
+  /* 3 + 3 layout */
 
   .process-track {
-    gap: 8px;
-    margin-top: 45px;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    row-gap: 42px;
+
+    margin-top: 52px;
   }
 
-  .process-step {
-    padding-left: 8px;
-    padding-right: 8px;
+
+  .process-line {
+    display: none;
   }
+
+
+  .process-step {
+    padding:
+      0 15px 20px;
+
+    border-bottom:
+      1px solid rgba(16, 59, 45, 0.11);
+  }
+
+
+  .process-step:first-of-type {
+    padding-left: 0;
+  }
+
+
+  .process-step:nth-child(4) {
+    padding-left: 0;
+  }
+
 
   .process-node {
     width: 58px;
     height: 58px;
   }
 
-  .process-line {
-    left: 29px;
-    right: 29px;
-    top: 29px;
-  }
 
   .process-content {
-    padding-top: 21px;
+    padding-top: 19px;
   }
+
 
   .process-content h3 {
     font-size: 26px;
   }
 
+
   .process-content p {
+    max-width: 190px;
+
     font-size: 11px;
   }
 
+
   .process-arrow {
-    right: 8px;
+    right: 10px;
   }
 }
+
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
+
   .process {
-    padding: 60px 0 38px;
+    padding:
+      65px 0 40px;
   }
 
+
   .process-bg-detail {
-    right: -150px;
-    bottom: -80px;
-    width: 330px;
-    height: 330px;
-    opacity: 0.3;
+    right: -190px;
+    bottom: -100px;
+
+    width: 350px;
+    height: 350px;
+
+    opacity: 0.35;
   }
+
 
   .process-heading-row {
     grid-template-columns: 1fr;
-    gap: 25px;
+
+    gap: 27px;
   }
 
+
   .process-heading-row h2 {
-    font-size: clamp(48px, 13vw, 64px);
-    line-height: 0.87;
+    max-width: 620px;
+
+    font-size:
+      clamp(46px, 12.5vw, 64px);
+
+    line-height: 0.89;
   }
+
 
   .process-intro {
     max-width: 520px;
-    padding-bottom: 0;
   }
+
 
   .process-intro p {
     max-width: 520px;
-    font-size: 10px;
+
+    font-size: 11px;
+
     line-height: 1.75;
   }
 
-  /* TIMELINE */
+
+  /* =====================================================
+     MOBILE TIMELINE
+  ===================================================== */
 
   .process-track {
     display: flex;
+
     flex-direction: column;
+
     gap: 0;
-    margin-top: 38px;
+
+    margin-top: 42px;
   }
 
+
   .process-line {
+    display: block;
+
     top: 29px;
-    bottom: 23px;
+
+    bottom: 30px;
+
     left: 28px;
+
     right: auto;
+
     width: 1px;
+
     height: auto;
+
+    background:
+      rgba(16, 59, 45, 0.13);
   }
+
 
   .process-line span {
     width: 1px;
     height: 100%;
-    background: linear-gradient(
-      180deg,
-      #c5a457 0%,
-      rgba(197, 164, 87, 0.3) 100%
-    );
+
+    background:
+      linear-gradient(
+        180deg,
+        #c5a457 0%,
+        rgba(197, 164, 87, 0.25) 100%
+      );
   }
 
-  /* STEP */
 
-  .process-step {
-    min-height: 0;
+  /* =====================================================
+     MOBILE STEP
+  ===================================================== */
+
+  .process-step,
+  .process-step:first-of-type,
+  .process-step:nth-child(4),
+  .process-step:last-child {
+    width: 100%;
+
     display: grid;
-    grid-template-columns: 58px minmax(0, 1fr);
+
+    grid-template-columns:
+      58px minmax(0, 1fr);
+
     column-gap: 18px;
-    padding: 0 0 28px;
+
+    min-height: 0;
+
+    padding:
+      0 0 32px;
+
     border-bottom: none;
+
+    transform: none;
   }
+
 
   .process-step:hover {
     background: transparent;
+
     transform: none;
   }
+
 
   .process-node {
     width: 58px;
     height: 58px;
   }
 
+
   .process-content {
     padding-top: 2px;
   }
 
-  .process-content h3 {
-    font-size: 29px;
+
+  .process-small {
+    margin-bottom: 8px;
+
+    font-size: 9px;
   }
 
-  .process-content p {
-    max-width: 500px;
-    font-size: 12px;
-    line-height: 1.65;
+
+  .process-content h3 {
+    font-size:
+      clamp(26px, 7vw, 31px);
   }
+
+
+  .process-content p {
+    max-width: 520px;
+
+    margin-top: 10px;
+
+    font-size: 11.5px;
+
+    line-height: 1.7;
+  }
+
 
   .process-arrow {
     position: static;
+
     grid-column: 2;
+
     width: 27px;
     height: 27px;
-    margin-top: 9px;
+
+    margin-top: 10px;
+
     opacity: 1;
+
     transform: none;
   }
+
+
+  .process-step:hover .process-arrow {
+    transform: none;
+  }
+
+
+  .process-footer-label {
+    margin-top: 28px;
+  }
 }
+
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 450px) {
+
   .process {
-    padding: 52px 0 32px;
+    padding:
+      55px 0 34px;
   }
+
 
   .process-bg-detail {
     display: none;
   }
 
-  .process-heading-row h2 {
-    font-size: 46px;
+
+  .process-eyebrow {
+    gap: 9px;
+
+    margin-bottom: 20px;
   }
+
+
+  .process-eyebrow span {
+    width: 30px;
+  }
+
+
+  .process-eyebrow p {
+    font-size: 8px;
+
+    letter-spacing: 0.17em;
+  }
+
+
+  .process-heading-row h2 {
+    font-size:
+      45px;
+
+    letter-spacing:
+      -0.055em;
+  }
+
 
   .process-intro p {
     font-size: 11px;
+
+    line-height: 1.7;
   }
 
+
   .process-track {
-    margin-top: 34px;
+    margin-top: 36px;
   }
+
 
   .process-line {
     left: 25px;
   }
 
-  .process-step {
-    grid-template-columns: 52px minmax(0, 1fr);
+
+  .process-step,
+  .process-step:first-of-type,
+  .process-step:nth-child(4),
+  .process-step:last-child {
+    grid-template-columns:
+      52px minmax(0, 1fr);
+
     column-gap: 15px;
-    padding-bottom: 25px;
+
+    padding-bottom: 28px;
   }
+
 
   .process-node {
     width: 52px;
     height: 52px;
   }
 
+
+  .process-node span {
+    font-size: 11px;
+  }
+
+
   .process-content h3 {
     font-size: 25px;
   }
 
+
   .process-content p {
     font-size: 11px;
+
+    line-height: 1.65;
   }
+
 
   .process-arrow {
     width: 25px;
     height: 25px;
+
     font-size: 11px;
   }
+
+
+  .process-footer-label {
+    margin-top: 20px;
+  }
 }
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .process-heading-row h2 {
+    font-size: 41px;
+  }
+
+
+  .process-step,
+  .process-step:first-of-type,
+  .process-step:nth-child(4),
+  .process-step:last-child {
+    grid-template-columns:
+      48px minmax(0, 1fr);
+
+    column-gap: 13px;
+  }
+
+
+  .process-node {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .process-line {
+    left: 23px;
+  }
+
+
+  .process-content h3 {
+    font-size: 23px;
+  }
+}
+
 
 /* =========================================================
    ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   .process *,
   .process *::before,
   .process *::after {
     animation-duration: 0.01ms !important;
+
     animation-iteration-count: 1 !important;
+
     transition-duration: 0.01ms !important;
   }
 }

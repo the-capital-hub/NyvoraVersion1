@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
@@ -6,19 +7,27 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  /* =====================================================
+     SCROLL DETECTION
+  ===================================================== */
+
   useEffect(() => {
-    const handleScroll = () => {
+    const onScroll = () => {
       setScrolled(window.scrollY > 35);
     };
 
-    handleScroll();
+    onScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", onScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
+
+  /* =====================================================
+     LOCK BODY SCROLL WHEN MOBILE MENU IS OPEN
+  ===================================================== */
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -28,9 +37,17 @@ export default function Navbar() {
     };
   }, [open]);
 
+  /* =====================================================
+     CLOSE MOBILE MENU
+  ===================================================== */
+
   const closeMenu = () => {
     setOpen(false);
   };
+
+  /* =====================================================
+     NAV LINK CLASS
+  ===================================================== */
 
   const navClass = ({ isActive }) =>
     `nav-item ${isActive ? "active" : ""}`;
@@ -39,33 +56,27 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="container nav-inner">
 
-        {/* =====================================================
-            BRAND
-        ===================================================== */}
+        {/* =================================================
+            LOGO
+        ================================================= */}
 
         <Link
           className="brand"
           to="/"
           onClick={closeMenu}
-          aria-label="NYVORA Home"
+          aria-label="NEEM LEGAL Home"
         >
-          <span className="brand-symbol">
-            N
-          </span>
-
-          <span className="brand-copy">
-            <strong>NYVORA</strong>
-
-            <small>
-              LAW · INTELLIGENCE · JUSTICE
-            </small>
-          </span>
+          <img
+            className="brand-logo"
+            src="/neem-legal-logo.png"
+            alt="NEEM LEGAL"
+          />
         </Link>
 
 
-        {/* =====================================================
-            MOBILE MENU BUTTON
-        ===================================================== */}
+        {/* =================================================
+            MOBILE HAMBURGER
+        ================================================= */}
 
         <button
           type="button"
@@ -79,9 +90,9 @@ export default function Navbar() {
         </button>
 
 
-        {/* =====================================================
+        {/* =================================================
             NAVIGATION
-        ===================================================== */}
+        ================================================= */}
 
         <nav
           className={`nav-links ${open ? "open" : ""}`}
@@ -107,36 +118,21 @@ export default function Navbar() {
           </NavLink>
 
 
-          {/* =================================================
-              EXPERTISE — NOW NORMAL LINK
-          ================================================= */}
+          <NavLink
+            to="/practice-areas"
+            className={navClass}
+            onClick={closeMenu}
+          >
+            Practice Areas
+          </NavLink>
 
-         
 
           <NavLink
             to="/attorneys"
             className={navClass}
             onClick={closeMenu}
           >
-            Attorneys
-          </NavLink>
-
-
-          <NavLink
-            to="/case-results"
-            className={navClass}
-            onClick={closeMenu}
-          >
-            Results
-          </NavLink>
-
-
-          <NavLink
-            to="/insights"
-            className={navClass}
-            onClick={closeMenu}
-          >
-            Insights
+            Advocate
           </NavLink>
 
 
@@ -169,18 +165,13 @@ export default function Navbar() {
             }
             onClick={closeMenu}
           >
-            <span>
-              Consultation
-            </span>
-
-            <b>
-              ↗
-            </b>
+            <span>Consultation</span>
+            <b>↗</b>
           </NavLink>
 
         </nav>
-
       </div>
     </header>
   );
 }
+

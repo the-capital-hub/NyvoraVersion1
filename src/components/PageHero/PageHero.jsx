@@ -9,8 +9,8 @@ export default function PageHero({ eyebrow, title, copy }) {
       <div className="page-hero-glow page-hero-glow-two" />
 
       <div className="page-hero-side">
-        <span>NYVORA</span>
-        <span>LEGAL · INDIA</span>
+        <span>NEEM LEGAL</span>
+        <span>LEGAL · BENGALURU</span>
       </div>
 
       <div className="container page-hero-container">

@@ -3,26 +3,69 @@ import { Link } from "react-router-dom";
 import "./Page.css";
 
 const values = [
-  {
-    no: "01",
-    title: "Clarity",
-    text: "We turn complex legal questions into clear, understandable choices.",
-  },
-  {
-    no: "02",
-    title: "Strategy",
-    text: "Every recommendation begins with the wider objective behind the matter.",
-  },
-  {
-    no: "03",
-    title: "Integrity",
-    text: "Discretion, honesty and professional responsibility remain central to our work.",
-  },
-  {
-    no: "04",
-    title: "Judgment",
-    text: "We look beyond the immediate issue to understand risk, timing and consequence.",
-  },
+  [
+    "01",
+    "Careful Examination",
+    "Careful examination of facts and documents before considering the appropriate legal position.",
+  ],
+  [
+    "02",
+    "Legal Research",
+    "Relevant legal provisions, issues and available legal considerations are researched and analysed.",
+  ],
+  [
+    "03",
+    "Clear Drafting",
+    "Legal documents, notices and other required documents are prepared in a clear and structured manner.",
+  ],
+  [
+    "04",
+    "Property Scrutiny",
+    "Property titles and relevant documents are reviewed to identify potential legal issues.",
+  ],
+  [
+    "05",
+    "Issue Identification",
+    "Potential legal issues are identified from the facts, documents and circumstances of the matter.",
+  ],
+  [
+    "06",
+    "Practical Solutions",
+    "The objective is to identify practical and legally appropriate options according to the matter.",
+  ],
+  [
+    "07",
+    "Professional Communication",
+    "Clients are kept informed about relevant legal considerations and available options.",
+  ],
+  [
+    "08",
+    "Confidentiality",
+    "Client information and legal matters are handled with appropriate confidentiality.",
+  ],
+];
+
+const approach = [
+  [
+    "01",
+    "Understand",
+    "Understanding the facts, documents and legal concerns presented by the client.",
+  ],
+  [
+    "02",
+    "Examine",
+    "Reviewing relevant documents, records and available information.",
+  ],
+  [
+    "03",
+    "Analyse",
+    "Analysing applicable legal provisions and potential legal issues.",
+  ],
+  [
+    "04",
+    "Advise",
+    "Explaining available legal options and relevant considerations.",
+  ],
 ];
 
 export default function About() {
@@ -34,156 +77,181 @@ export default function About() {
       ===================================================== */}
 
       <section className="about-hero">
+
         <div className="about-hero-line" />
 
         <div className="container about-hero-inner">
 
           <motion.div
             className="about-hero-main"
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{
+              duration: 0.7,
+              ease: "easeOut",
+            }}
           >
-            <div className="about-kicker">
+
+            <div className="about-kicker dark">
               <span />
-              <p>About Nyvora</p>
+              <p>About NEEM LEGAL</p>
             </div>
 
             <h1>
-              Legal counsel
+              Professional legal
               <br />
-              <em>with perspective.</em>
+              <em>assistance in Bengaluru.</em>
             </h1>
 
             <p className="about-hero-copy">
-              A modern Indian legal practice built around clear thinking,
-              considered strategy and trusted representation.
+              NEEM LEGAL is a legal practice focused on professional
+              legal assistance, legal documentation, property-related
+              legal scrutiny, litigation support and advisory services.
             </p>
 
             <div className="about-hero-meta">
-              <span>INDIA</span>
+              <span>ADV. SHOBHA.H.K</span>
               <i />
-              <span>LEGAL COUNSEL</span>
+              <span>NEEM LEGAL</span>
               <i />
-              <span>EST. 2026</span>
+              <span>BENGALURU</span>
             </div>
+
           </motion.div>
+
 
           <motion.div
             className="about-hero-side"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.25 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.15,
+            }}
           >
+
             <div className="about-emblem">
-              <span>N</span>
+              <span>NL</span>
             </div>
 
             <p>
-              Thoughtful advice
+              Legal assistance
               <br />
-              for consequential
-              <br />
-              decisions.
+              with clarity.
             </p>
+
           </motion.div>
 
         </div>
+
       </section>
 
 
       {/* =====================================================
-          OUR STORY
+          THE PRACTICE
       ===================================================== */}
 
       <section className="about-story">
-        <div className="container about-story-grid">
 
-          <motion.div
-            className="about-story-media"
-            initial={{ opacity: 0, x: -25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.75 }}
-          >
-            <a
-              href="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=88"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="about-image-link"
+        <div className="container">
+
+          <div className="about-story-grid">
+
+            <motion.div
+              className="about-story-media"
+              initial={{ opacity: 0, x: -25 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.65,
+              }}
             >
+
               <div className="about-story-image">
 
                 <img
-                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=88"
-                  alt="Legal books and Indian legal heritage"
+                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=88"
+                  alt="Legal documents and law office"
                 />
 
                 <div className="about-image-overlay" />
 
                 <div className="about-image-top">
-                  <span>NYVORA</span>
-                  <span>01 — OUR STORY</span>
+                  <span>NEEM LEGAL</span>
+                  <span>01</span>
                 </div>
 
                 <div className="about-image-bottom">
-                  <span>LAW</span>
+                  <span>ADV. SHOBHA.H.K</span>
                   <i />
-                  <span>INDIA</span>
+                  <span>BENGALURU</span>
                 </div>
 
               </div>
-            </a>
 
-            <div className="about-image-caption">
-              <span />
-              <p>Grounded in the Indian legal tradition</p>
-            </div>
-          </motion.div>
+              <div className="about-image-caption">
+                <span />
+                <p>Professional Legal Practice</p>
+              </div>
+
+            </motion.div>
 
 
-          <motion.div
-            className="about-story-content"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.75 }}
-          >
-            <div className="about-kicker light">
-              <span />
-              <p>Our Story</p>
-            </div>
+            <motion.div
+              className="about-story-content"
+              initial={{ opacity: 0, x: 25 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.65,
+                delay: 0.08,
+              }}
+            >
 
-            <h2>
-              Law should make
-              <br />
-              decisions <em>clearer.</em>
-            </h2>
+              <div className="about-kicker light">
+                <span />
+                <p>The Practice</p>
+              </div>
 
-            <p>
-              Nyvora was created around a simple idea: legal advice should
-              be practical, understandable and connected to the reality
-              of the people and businesses it serves.
-            </p>
+              <h2>
+                Understanding the legal position
+                <br />
+                <em>before taking the next step.</em>
+              </h2>
 
-            <p>
-              We begin by understanding the situation before looking for
-              the answer. That means considering the legal position alongside
-              commercial priorities, personal circumstances, timing and risk.
-            </p>
+              <p>
+                Adv. SHOBHA.H.K is an Advocate practising in Bengaluru,
+                Karnataka, with professional interests in civil and
+                criminal matters, property and real estate law, legal
+                documentation, legal scrutiny, family matters,
+                commercial matters and litigation-related services.
+              </p>
 
-            <p>
-              The result is counsel designed not merely to explain the law,
-              but to help clients make better decisions with confidence.
-            </p>
+              <p>
+                The objective is to assist clients in understanding
+                their legal position and taking informed decisions
+                based on the facts and applicable law.
+              </p>
 
-            <div className="about-story-note">
-              <span />
-              <p>Clarity before complexity.</p>
-            </div>
-          </motion.div>
+              <div className="about-story-note">
+                <span />
+                <p>
+                  Facts · Documents · Applicable Law
+                </p>
+              </div>
+
+            </motion.div>
+
+          </div>
 
         </div>
+
       </section>
 
 
@@ -192,26 +260,29 @@ export default function About() {
       ===================================================== */}
 
       <section className="about-values">
+
         <div className="container">
 
           <div className="about-values-heading">
 
             <div>
+
               <div className="about-kicker dark">
                 <span />
-                <p>Our Principles</p>
+                <p>Our Approach</p>
               </div>
 
               <h2>
-                What guides
+                Careful. Clear.
                 <br />
-                <em>our practice.</em>
+                <em>Practical.</em>
               </h2>
+
             </div>
 
             <p>
-              Strong legal work depends on more than knowledge. It depends
-              on how that knowledge is applied.
+              The practice remains focused on facts, documents,
+              applicable law and clear communication with clients.
             </p>
 
           </div>
@@ -219,139 +290,147 @@ export default function About() {
 
           <div className="about-values-list">
 
-            {values.map((value, index) => (
+            {values.map(([number, title, text]) => (
               <motion.div
                 className="about-value"
-                key={value.no}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                key={number}
+                initial={{
+                  opacity: 0,
+                  y: 18,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.15,
+                }}
                 transition={{
-                  duration: 0.5,
-                  delay: index * 0.06,
+                  duration: 0.45,
                 }}
               >
+
                 <span className="about-value-number">
-                  {value.no}
+                  {number}
                 </span>
 
-                <h3>{value.title}</h3>
+                <h3>{title}</h3>
 
-                <p>{value.text}</p>
+                <p>{text}</p>
 
                 <span className="about-value-arrow">
                   ↗
                 </span>
+
               </motion.div>
             ))}
 
           </div>
 
         </div>
+
       </section>
 
 
       {/* =====================================================
-          APPROACH
+          LEGAL APPROACH
       ===================================================== */}
 
       <section className="about-approach">
+
         <div className="container about-approach-grid">
 
           <motion.div
             className="about-approach-content"
-            initial={{ opacity: 0, x: -25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
+            initial={{
+              opacity: 0,
+              y: 22,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
           >
 
             <div className="about-kicker light">
               <span />
-              <p>Our Approach</p>
+              <p>Legal Process</p>
             </div>
 
             <h2>
               Understand.
               <br />
-              Advise.
+              <em>Examine.</em>
               <br />
-              <em>Act.</em>
+              Advise.
             </h2>
 
             <p>
-              Every matter is different. Our approach is therefore designed
-              to remain personal, responsive and focused on the outcome that
-              actually matters to the client.
+              From the initial understanding of a matter to
+              documentation or further legal steps, the process
+              remains focused on the facts, relevant documents and
+              applicable law.
             </p>
 
             <Link
               to="/practice-areas"
               className="about-text-link"
             >
-              <span>Explore our practice</span>
+              <span>Explore Practice Areas</span>
               <b>↗</b>
             </Link>
 
           </motion.div>
 
 
-          <motion.div
-            className="about-approach-panel"
-            initial={{ opacity: 0, x: 25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="about-approach-panel">
 
-            <div className="about-approach-item">
-              <span>01</span>
-              <div>
-                <h3>Understand the matter</h3>
-                <p>
-                  We first identify the objective, context and legal issues.
-                </p>
-              </div>
-            </div>
+            {approach.map(([number, title, text], index) => (
+              <motion.div
+                className="about-approach-item"
+                key={number}
+                initial={{
+                  opacity: 0,
+                  x: 18,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.15,
+                }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.05,
+                }}
+              >
 
-            <div className="about-approach-item">
-              <span>02</span>
-              <div>
-                <h3>Assess the options</h3>
-                <p>
-                  We evaluate the available routes, risks and consequences.
-                </p>
-              </div>
-            </div>
+                <span>{number}</span>
 
-            <div className="about-approach-item">
-              <span>03</span>
-              <div>
-                <h3>Build the strategy</h3>
-                <p>
-                  We translate analysis into a practical course of action.
-                </p>
-              </div>
-            </div>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
 
-            <div className="about-approach-item">
-              <span>04</span>
-              <div>
-                <h3>Move forward</h3>
-                <p>
-                  We remain focused on execution, communication and results.
-                </p>
-              </div>
-            </div>
+              </motion.div>
+            ))}
 
-          </motion.div>
+          </div>
 
         </div>
+
       </section>
 
 
       {/* =====================================================
-          CLOSING CTA
+          CLOSING
       ===================================================== */}
 
       <section className="about-closing">
@@ -360,35 +439,39 @@ export default function About() {
 
           <div className="about-kicker dark">
             <span />
-            <p>Start a Conversation</p>
+            <p>Professional Profile</p>
             <span />
           </div>
 
           <h2>
-            Good counsel begins
-            <br />
-            with <em>understanding.</em>
+            Adv. SHOBHA.H.K
           </h2>
 
           <p>
-            Tell us what you are dealing with. We will help you understand
-            the legal path and identify the right next step.
+            Designation: Advocate · Firm: NEEM LEGAL ·
+            Place of Practice: Bengaluru, Karnataka
           </p>
 
           <Link
-            to="/consultation"
+            to="/contact"
             className="about-closing-button"
           >
-            <span>Book a Consultation</span>
+            <span>Contact the Office</span>
             <b>↗</b>
           </Link>
 
           <div className="about-closing-bottom">
-            <span>PRIVATE</span>
+
+            <span>ADV. SHOBHA.H.K</span>
+
             <i />
-            <span>CONFIDENTIAL</span>
+
+            <span>BENGALURU, KARNATAKA</span>
+
             <i />
-            <span>CONSIDERED</span>
+
+            <span>NEEM LEGAL</span>
+
           </div>
 
         </div>

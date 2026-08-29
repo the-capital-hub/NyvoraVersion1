@@ -1,57 +1,13 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import "./Contact.css";
 
-const practiceAreas = [
-  "Corporate & Business",
-  "Property & Real Estate",
-  "Civil Litigation",
-  "Criminal Defense",
-  "Family Law",
-  "Cyber & Technology",
-  "Intellectual Property",
-];
-
-const legalPath = [
-  {
-    number: "01",
-    title: "Understand",
-    text: "We first understand the facts, people, documents and objectives involved.",
-  },
-  {
-    number: "02",
-    title: "Assess",
-    text: "We identify the relevant legal area, priorities and possible routes forward.",
-  },
-  {
-    number: "03",
-    title: "Proceed",
-    text: "The next step is shaped around the matter and the client's objectives.",
-  },
-];
-
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    practice: "",
-    enquiry: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (field, value) => {
-    setForm((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    alert(
+      "Thank you. Please contact the office directly to complete your enquiry."
+    );
   };
 
   return (
@@ -62,530 +18,441 @@ export default function Contact() {
       ===================================================== */}
 
       <section className="contact-hero">
-
-        <div className="contact-hero-circle" />
+        <div className="contact-hero-decoration" aria-hidden="true">
+          <span className="contact-ring contact-ring-one" />
+          <span className="contact-ring contact-ring-two" />
+          <span className="contact-cross contact-cross-one" />
+          <span className="contact-cross contact-cross-two" />
+        </div>
 
         <div className="container contact-hero-inner">
-
           <motion.div
             className="contact-hero-content"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75 }}
+            transition={{
+              duration: 0.7,
+              ease: "easeOut",
+            }}
           >
-
             <div className="contact-eyebrow">
               <span />
-              <p>Contact · New Delhi, India</p>
+              <p>Contact · Bengaluru, Karnataka</p>
             </div>
 
             <h1>
-              Start a
+              Contact
               <br />
-              <em>conversation.</em>
+              <em>NEEM LEGAL.</em>
             </h1>
 
-            <p>
-              Tell us what you need help with. Our team can help direct
-              your enquiry to the relevant practice area or consultation
-              path.
+            <p className="contact-hero-description">
+              To discuss a legal matter, please contact the office and
+              provide a brief description of the matter and relevant
+              documents, where appropriate.
             </p>
 
             <div className="contact-hero-meta">
-              <span>PRIVATE</span>
+              <span>ADV. SHOBHA.H.K</span>
               <i />
-              <span>CONFIDENTIAL</span>
+              <span>NEEM LEGAL</span>
               <i />
-              <span>NEW DELHI</span>
+              <span>BENGALURU</span>
             </div>
-
           </motion.div>
-
 
           <motion.div
             className="contact-hero-mark"
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.15,
+            }}
           >
-
             <div className="contact-seal">
-              <span>N</span>
+              <span>NL</span>
             </div>
 
-            <small>NYVORA</small>
-            <small>LEGAL COUNSEL</small>
-
+            <small>LEGAL</small>
+            <small>COUNSEL</small>
           </motion.div>
-
         </div>
-
 
         <div className="contact-hero-bottom">
-          <span>01 — CONTACT</span>
-          <span>COUNSEL · INDIA</span>
+          <span>NEEM LEGAL</span>
+          <span>LEGAL CONSULTATION</span>
+          <span>01 / CONTACT</span>
         </div>
-
       </section>
 
 
       {/* =====================================================
-          CONTACT INTRO
+          OFFICE DETAILS
       ===================================================== */}
 
       <section className="contact-intro">
-
         <div className="container contact-intro-grid">
 
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="contact-intro-heading"
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.65 }}
+            transition={{ duration: 0.6 }}
           >
-
             <div className="contact-section-label">
               <span />
-              <p>Connect With NYVORA</p>
+              <p>Office Details</p>
             </div>
 
             <h2>
-              A considered first
+              Adv. SHOBHA.H.K
               <br />
-              <em>conversation.</em>
+              <em>NEEM LEGAL</em>
             </h2>
 
+            <p className="contact-office-description">
+              For legal consultation and assistance, please contact
+              the office directly using the details provided.
+            </p>
           </motion.div>
 
 
           <motion.div
-            className="contact-intro-copy"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="contact-details-card"
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.65 }}
-          >
-
-            <p>
-              Every matter begins differently. Tell us a little about
-              what you are facing and we will help identify the most
-              appropriate next step.
-            </p>
-
-            <div className="contact-intro-note">
-              <span>✦</span>
-
-              <div>
-                <strong>Legal Counsel · India</strong>
-                <small>
-                  Listen · Understand · Advise
-                </small>
-              </div>
-            </div>
-
-          </motion.div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          MAIN CONTACT
-      ===================================================== */}
-
-      <section className="contact-main">
-
-        <div className="container contact-main-grid">
-
-          {/* OFFICE */}
-
-          <motion.div
-            className="contact-office"
-            initial={{ opacity: 0, x: -25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.65 }}
-          >
-
-            <div className="contact-block-label">
-              <span>01</span>
-              <p>Our Office</p>
-            </div>
-
-            <h3>
-              New Delhi
-              <br />
-              <em>India.</em>
-            </h3>
-
-            <p className="contact-office-copy">
-              NYVORA is designed around a modern India-first legal
-              experience, combining careful legal thinking with clear
-              communication and thoughtful technology.
-            </p>
-
-
-            <div className="contact-details">
-
-              <div>
-                <small>Email</small>
-                <a href="mailto:hello@nyvora.example">
-                  hello@nyvora.example
-                </a>
-              </div>
-
-              <div>
-                <small>Phone</small>
-                <a href="tel:+910000000000">
-                  +91 00000 00000
-                </a>
-              </div>
-
-              <div>
-                <small>Office Hours</small>
-                <strong>Monday — Friday</strong>
-                <span>9:30 AM — 6:30 PM</span>
-              </div>
-
-              <div>
-                <small>Appointments</small>
-                <strong>By prior appointment</strong>
-              </div>
-
-            </div>
-
-
-            <div className="contact-office-seal">
-
-              <div className="contact-office-seal-inner">
-
-                <span>✦</span>
-
-                <strong>NYVORA</strong>
-
-                <small>LEGAL COUNSEL</small>
-
-                <em>NEW DELHI · INDIA</em>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
-
-          {/* FORM */}
-
-          <motion.div
-            className="contact-enquiry"
-            initial={{ opacity: 0, x: 25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
             transition={{
-              duration: 0.65,
-              delay: 0.1,
+              duration: 0.6,
+              delay: 0.08,
             }}
           >
 
-            {!submitted ? (
-              <>
+            <div className="contact-detail">
+              <div className="contact-detail-label">
+                <span>01</span>
+                <small>OFFICE</small>
+              </div>
 
-                <div className="contact-form-top">
-
-                  <div>
-                    <span>02</span>
-                    <small>PRIVATE ENQUIRY</small>
-                  </div>
-
-                  <span>NYVORA · INDIA</span>
-
-                </div>
+              <div className="contact-detail-value">
+                <strong>Bengaluru, Karnataka</strong>
+              </div>
+            </div>
 
 
-                <div className="contact-form-heading">
+            <div className="contact-detail">
+              <div className="contact-detail-label">
+                <span>02</span>
+                <small>PHONE</small>
+              </div>
 
-                  <span>Begin here.</span>
-
-                  <h3>
-                    Tell us about
-                    <br />
-                    <em>your matter.</em>
-                  </h3>
-
-                  <p>
-                    Please provide a brief overview. You do not need
-                    to include confidential or highly sensitive
-                    information at this stage.
-                  </p>
-
-                </div>
+              <div className="contact-detail-value">
+                <a href="tel:+919886112141">
+                  9886112141
+                </a>
+              </div>
+            </div>
 
 
-                <form
-                  className="contact-form"
-                  onSubmit={handleSubmit}
-                >
+            <div className="contact-detail">
+              <div className="contact-detail-label">
+                <span>03</span>
+                <small>EMAIL</small>
+              </div>
 
-                  <label>
-                    <span>01 · FULL NAME</span>
-
-                    <input
-                      type="text"
-                      value={form.name}
-                      onChange={(e) =>
-                        handleChange("name", e.target.value)
-                      }
-                      placeholder="Your full name"
-                      required
-                    />
-                  </label>
+              <div className="contact-detail-value">
+                <a href="mailto:attorneyshobha@gmail.com">
+                  attorneyshobha@gmail.com
+                </a>
+              </div>
+            </div>
 
 
-                  <div className="contact-form-row">
+            <div className="contact-detail">
+              <div className="contact-detail-label">
+                <span>04</span>
+                <small>WEBSITE</small>
+              </div>
 
-                    <label>
-                      <span>02 · EMAIL</span>
-
-                      <input
-                        type="email"
-                        value={form.email}
-                        onChange={(e) =>
-                          handleChange("email", e.target.value)
-                        }
-                        placeholder="you@example.com"
-                        required
-                      />
-                    </label>
-
-
-                    <label>
-                      <span>03 · PHONE</span>
-
-                      <input
-                        type="tel"
-                        value={form.phone}
-                        onChange={(e) =>
-                          handleChange("phone", e.target.value)
-                        }
-                        placeholder="+91"
-                        required
-                      />
-                    </label>
-
-                  </div>
-
-
-                  <label>
-                    <span>04 · PRACTICE AREA</span>
-
-                    <select
-                      value={form.practice}
-                      onChange={(e) =>
-                        handleChange("practice", e.target.value)
-                      }
-                      required
-                    >
-
-                      <option value="" disabled>
-                        Select a legal area
-                      </option>
-
-                      {practiceAreas.map((area) => (
-                        <option key={area} value={area}>
-                          {area}
-                        </option>
-                      ))}
-
-                    </select>
-
-                  </label>
-
-
-                  <label>
-                    <span>05 · YOUR ENQUIRY</span>
-
-                    <textarea
-                      rows="6"
-                      value={form.enquiry}
-                      onChange={(e) =>
-                        handleChange("enquiry", e.target.value)
-                      }
-                      placeholder="Briefly tell us what you need help with..."
-                      required
-                    />
-
-                  </label>
-
-
-                  <div className="contact-form-footer">
-
-                    <small>
-                      General enquiries only. Submitting this form
-                      does not establish an advocate-client relationship.
-                    </small>
-
-                    <button
-                      type="submit"
-                      className="contact-submit"
-                    >
-                      <span>Send Enquiry</span>
-                      <b>↗</b>
-                    </button>
-
-                  </div>
-
-                </form>
-
-              </>
-            ) : (
-
-              <motion.div
-                className="contact-success"
-                initial={{
-                  opacity: 0,
-                  scale: 0.97,
-                }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                transition={{ duration: 0.45 }}
-              >
-
-                <div className="contact-success-mark">
-                  ✓
-                </div>
-
-                <span>ENQUIRY RECEIVED</span>
-
-                <h3>
-                  Thank you for
-                  <br />
-                  <em>reaching out.</em>
-                </h3>
-
-                <p>
-                  Your enquiry has been recorded. Our team will
-                  review the information provided and get back to
-                  you regarding the next step.
-                </p>
-
-                <Link
-                  to="/consultation"
-                  className="contact-success-link"
-                >
-                  Book a consultation ↗
-                </Link>
-
-              </motion.div>
-
-            )}
+              <div className="contact-detail-value">
+                <span>www.neemlegal.com</span>
+              </div>
+            </div>
 
           </motion.div>
 
         </div>
-
       </section>
 
 
       {/* =====================================================
-          LEGAL PATH
+          CONSULTATION FORM
       ===================================================== */}
 
-      <section className="contact-path">
+      <section className="contact-form-section">
+        <div className="container">
 
-        <div className="container contact-path-grid">
+          <motion.div
+            className="contact-form-wrap"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.65 }}
+          >
+
+            <div className="contact-form-intro">
+
+              <div className="contact-section-label">
+                <span />
+                <p>Consultation Enquiry</p>
+              </div>
+
+              <h2>
+                Share a brief
+                <br />
+                <em>description of your matter.</em>
+              </h2>
+
+              <p>
+                Please provide a concise description of your legal
+                matter and the relevant information. Documents may be
+                shared where appropriate.
+              </p>
+
+              <div className="contact-form-note">
+                <span>✦</span>
+
+                <div>
+                  <strong>Clear information helps.</strong>
+                  <small>
+                    Please provide relevant facts and documents where
+                    appropriate.
+                  </small>
+                </div>
+              </div>
+
+            </div>
+
+
+            <form
+              className="contact-form"
+              onSubmit={handleSubmit}
+            >
+
+              <div className="contact-form-top">
+                <span>ENQUIRY FORM</span>
+                <small>NEEM LEGAL</small>
+              </div>
+
+
+              <div className="contact-form-row">
+
+                <label>
+                  <span>Your Name</span>
+
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </label>
+
+
+                <label>
+                  <span>Email Address</span>
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </label>
+
+              </div>
+
+
+              <label>
+                <span>Phone Number</span>
+
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                />
+              </label>
+
+
+              <label>
+                <span>Brief Description of the Matter</span>
+
+                <textarea
+                  name="message"
+                  placeholder="Please briefly describe your legal matter..."
+                  rows="7"
+                  required
+                />
+              </label>
+
+
+              <div className="contact-form-footer">
+
+                <small>
+                  Please do not include highly confidential information
+                  in this initial enquiry.
+                </small>
+
+                <button
+                  type="submit"
+                  className="contact-submit"
+                >
+                  <span>Send Enquiry</span>
+                  <b>↗</b>
+                </button>
+
+              </div>
+
+            </form>
+
+          </motion.div>
+
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          CLIENT INFORMATION
+      ===================================================== */}
+
+      <section className="contact-information">
+        <div className="container contact-information-grid">
 
           <div>
-
             <div className="contact-section-label">
               <span />
-              <p>The First Step</p>
+              <p>Before Consultation</p>
             </div>
 
             <h2>
-              Good counsel begins
+              Information that
               <br />
-              with <em>listening.</em>
+              <em>may be useful.</em>
             </h2>
-
           </div>
 
 
-          <div className="contact-path-list">
+          <div className="contact-information-list">
 
-            {legalPath.map((item) => (
-              <div
-                className="contact-path-item"
-                key={item.number}
-              >
+            <div className="contact-information-item">
+              <span>01</span>
 
-                <span>{item.number}</span>
-
-                <div>
-                  <strong>{item.title}</strong>
-
-                  <p>{item.text}</p>
-                </div>
-
-                <b>↗</b>
-
+              <div>
+                <strong>Brief description</strong>
+                <p>
+                  A brief description of the legal matter and the
+                  assistance required.
+                </p>
               </div>
-            ))}
+            </div>
+
+
+            <div className="contact-information-item">
+              <span>02</span>
+
+              <div>
+                <strong>Important dates</strong>
+                <p>
+                  Relevant dates or deadlines connected with the
+                  matter, where applicable.
+                </p>
+              </div>
+            </div>
+
+
+            <div className="contact-information-item">
+              <span>03</span>
+
+              <div>
+                <strong>Relevant documents</strong>
+                <p>
+                  Documents, notices, agreements or other records
+                  relevant to the matter, where appropriate.
+                </p>
+              </div>
+            </div>
+
+
+            <div className="contact-information-item">
+              <span>04</span>
+
+              <div>
+                <strong>Previous proceedings</strong>
+                <p>
+                  Details of any previous legal proceedings or
+                  related matters, if applicable.
+                </p>
+              </div>
+            </div>
 
           </div>
 
         </div>
-
       </section>
 
 
       {/* =====================================================
-          CONSULTATION CTA
+          FINAL CTA
       ===================================================== */}
 
       <section className="contact-cta">
 
-        <div className="contact-cta-circle" />
+        <div
+          className="contact-cta-decoration"
+          aria-hidden="true"
+        >
+          <span />
+          <span />
+        </div>
 
         <div className="container contact-cta-inner">
 
-          <div className="contact-section-label contact-light-label">
+          <div className="contact-light-label">
             <span />
-            <p>Prefer A Guided Start?</p>
+            <p>NEEM LEGAL</p>
+            <span />
           </div>
 
           <h2>
-            Book a
+            Need to discuss
             <br />
-            <em>consultation.</em>
+            <em>a legal matter?</em>
           </h2>
 
           <p>
-            If you already know what you need, take the guided
-            consultation route and tell us more about your matter.
+            Contact the office in Bengaluru to discuss your legal
+            matter and the assistance required.
           </p>
 
-          <Link
-            to="/consultation"
+          <a
             className="contact-cta-button"
+            href="tel:+919886112141"
           >
-            <span>Start Consultation</span>
+            <span>Call 9886112141</span>
             <b>↗</b>
-          </Link>
-
+          </a>
 
           <div className="contact-cta-bottom">
-            <span>PRIVATE</span>
+            <span>ADV. SHOBHA.H.K</span>
             <i />
-            <span>CONFIDENTIAL</span>
+            <span>BENGALURU, KARNATAKA</span>
             <i />
-            <span>STRATEGIC</span>
+            <span>NEEM LEGAL</span>
           </div>
 
         </div>
-
       </section>
 
     </main>

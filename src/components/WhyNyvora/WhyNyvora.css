@@ -555,6 +555,69 @@
    LIST
 ========================================================= */
 
+
+.why-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+
+  min-width: 220px;
+  min-height: 52px;
+
+  padding: 0 16px 0 20px;
+
+  border: 1px solid rgba(176, 141, 66, 0.55);
+
+  background: transparent;
+
+  color: #a1aca9;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-link b {
+  display: grid;
+  place-items: center;
+
+  width: 28px;
+  height: 28px;
+
+  background: #123c2e;
+
+  color: #d2b264;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.why-link:hover {
+  background: #123c2e;
+  color: #f7f3ea;
+
+  transform: translateY(-2px);
+}
+
+.why-link:hover b {
+  background: #d2b264;
+  color: #123c2e;
+
+  transform: translate(2px, -2px);
+}
+
 .why-list {
   max-width: 600px;
 

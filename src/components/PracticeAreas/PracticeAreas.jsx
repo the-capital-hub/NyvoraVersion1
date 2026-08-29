@@ -5,63 +5,125 @@ import "./PracticeAreas.css";
 const areas = [
   [
     "01",
-    "Corporate & Business",
-    "corporate",
-    "Advisory, contracts, transactions and commercial risk.",
-    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=88",
-  ],
-  [
-    "02",
-    "Property & Real Estate",
-    "property",
-    "Ownership, documentation, transactions and disputes.",
-    "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=88",
-  ],
-  [
-    "03",
-    "Civil Litigation",
+    "Civil Law",
     "civil",
-    "Focused representation for contested legal matters.",
-    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=88",
-  ],
-  [
-    "04",
-    "Criminal Defense",
-    "criminal",
-    "Strategic representation with discretion and preparation.",
+    "Civil disputes, recovery, injunction, declaration, specific performance, partition, possession, contractual disputes and litigation support.",
     "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=1200&q=88",
   ],
+
+  [
+    "02",
+    "Criminal Law",
+    "criminal",
+    "Criminal complaints, bail, anticipatory bail, regular bail, criminal proceedings, defence assistance and litigation support.",
+    "https://static.wixstatic.com/media/c74dd1_c9e83dbe0a594c0dbe2212b883c4f0ff~mv2.png/v1/fill/w_936%2Ch_624%2Cal_c%2Cq_90%2Cenc_avif%2Cquality_auto/c74dd1_c9e83dbe0a594c0dbe2212b883c4f0ff~mv2.png",
+  ],
+
+  [
+    "03",
+    "Family Law",
+    "family",
+    "Divorce, maintenance, custody and guardianship, domestic disputes, succession, inheritance, settlements and family notices.",
+    "https://fulcrumfl.com.au/family-law.jpg",
+  ],
+
+  [
+    "04",
+    "High Court Matters",
+    "high-court",
+    "Legal consultation, drafting, writ-related matters, civil and criminal proceedings, appeals, revisions, research and litigation support.",
+    "https://framerusercontent.com/images/b7UQdCkhGVscB8Yz8X2B3QwBDCs.png",
+  ],
+
   [
     "05",
-    "Cyber & Technology",
-    "cyber",
-    "Legal guidance for digital products, data and technology.",
-    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=88",
+    "Property & Real Estate Law",
+    "property",
+    "Residential and commercial property transactions, documentation, disputes, ownership and possession-related matters.",
+    "https://www.bryshunmace.com/wp-content/uploads/2025/04/Real-Estate-Law-Kelowna.png",
   ],
+
   [
     "06",
-    "Intellectual Property",
-    "ip",
-    "Protecting brands, ideas, creative work and innovation.",
+    "Property Title Verification",
+    "title-verification",
+    "Examination of title flow, ownership, encumbrances, revenue records and supporting property documents.",
+    "https://certificateoftitle.nz/cdn/shop/articles/conveyancing-title-search-guide-nz-solicitors.png?v=1772921545&width=2000",
+  ],
+
+  [
+    "07",
+    "Legal Scrutiny & Due Diligence",
+    "legal-scrutiny",
+    "Document collection, title examination, ownership review, records verification, issue identification and legal observations.",
+    "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=88",
+  ],
+
+  [
+    "08",
+    "Sale Deed & Document Drafting",
+    "legal-drafting",
+    "Sale deeds, agreements, gift, partition, release, settlement, rectification, confirmation deeds and related documents.",
     "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=88",
   ],
+
+  [
+    "09",
+    "Civil Litigation",
+    "civil-litigation",
+    "Assistance with civil proceedings, pleadings, legal notices, disputes and other litigation-related requirements.",
+    "https://storage.googleapis.com/48877118-7272-4a4d-b302-0465d8aa4548/09ddd8ab-bc06-4afe-a02b-6758ab912441/00a27309-63cb-4578-9c3c-d222b2a227c5.png",
+  ],
+
+  [
+    "10",
+    "Legal Notices",
+    "legal-notices",
+    "Notices concerning property disputes, recovery, breach of contract, dues, tenancy, possession, family and commercial disputes.",
+    "https://rerafiling.com/upload/articles/articles_1897329205.png",
+  ],
+
+  [
+    "11",
+    "Agreements & Contracts",
+    "agreements-contracts",
+    "Agreement drafting and review, contracts, leases, rent agreements, construction and other commercial documentation.",
+    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=88",
+  ],
+
+  [
+    "12",
+    "Corporate & Commercial Legal Matters",
+    "corporate-commercial",
+    "Agreement and contract review, vendor and service agreements, employment documentation, NDAs, MoUs, partnerships and commercial disputes.",
+    "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=88",
+  ],
 ];
+
+export { areas };
 
 export default function PracticeAreas() {
   return (
     <section className="practice">
-      {/* PREMIUM BACKGROUND DETAIL */}
-      <div
-        className="practice-bg-detail"
-        aria-hidden="true"
-      >
+
+      {/* =====================================================
+          BACKGROUND DETAIL
+      ===================================================== */}
+
+      <div className="practice-bg-detail">
+
         <span className="detail-circle" />
+
         <span className="detail-line detail-line-one" />
+
         <span className="detail-line detail-line-two" />
+
         <span className="detail-mark">
-          NYVORA · 03
+          NEEM LEGAL · 03
         </span>
+
       </div>
+
 
       <div className="container practice-container">
 
@@ -81,27 +143,27 @@ export default function PracticeAreas() {
           }}
           viewport={{
             once: true,
-            amount: 0.2,
           }}
           transition={{
-            duration: 0.75,
-            ease: [0.22, 1, 0.36, 1],
+            duration: 0.6,
           }}
         >
+
           <div className="practice-heading">
 
             <div className="practice-eyebrow">
               <span />
-              <p>Areas of Expertise</p>
+              <p>Areas of Practice</p>
             </div>
 
             <h2>
-              Focused counsel.
+              Professional legal
               <br />
-              <em>Meaningful direction.</em>
+              <em>assistance.</em>
             </h2>
 
           </div>
+
 
           <div className="practice-intro-copy">
 
@@ -110,20 +172,23 @@ export default function PracticeAreas() {
             </span>
 
             <p>
-              Legal work is rarely one-size-fits-all.
-              Our practice areas are structured around
-              the decisions, risks and disputes that matter
-              most to our clients.
+              Our services cover civil, criminal, family, High Court,
+              property, documentation, litigation, notices, agreements
+              and corporate/commercial legal matters.
             </p>
 
             <div className="practice-india">
+
               <span>●</span>
+
               <strong>
-                Legal Practice · India
+                Bengaluru · Karnataka
               </strong>
+
             </div>
 
           </div>
+
         </motion.div>
 
 
@@ -133,98 +198,118 @@ export default function PracticeAreas() {
 
         <div className="practice-list">
 
-          {areas.map((area, index) => (
+          {areas.map((area, index) => {
 
-            <motion.div
-              key={area[2]}
-              className="practice-item"
-              initial={{
-                opacity: 0,
-                y: 16,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.12,
-              }}
-              transition={{
-                duration: 0.58,
-                delay: index * 0.045,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
+            const [
+              number,
+              title,
+              slug,
+              description,
+              image,
+            ] = area;
 
-              <Link
-                className="practice-card"
-                to={`/practice-areas/${area[2]}`}
+            return (
+              <motion.div
+                key={slug}
+                className="practice-item"
+                initial={{
+                  opacity: 0,
+                  y: 16,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.1,
+                }}
+                transition={{
+                  delay: index * 0.03,
+                  duration: 0.45,
+                }}
               >
 
-                {/* NUMBER */}
+                <Link
+                  className="practice-card"
+                  to={`/practice-areas/${slug}`}
+                >
 
-                <div className="practice-number">
-                  <span>{area[0]}</span>
-                  <i />
-                </div>
+                  {/* NUMBER */}
+
+                  <div className="practice-number">
+
+                    <span>
+                      {number}
+                    </span>
+
+                    <i />
+
+                  </div>
 
 
-                {/* CONTENT */}
+                  {/* INFORMATION */}
 
-                <div className="practice-info">
+                  <div className="practice-info">
 
-                  <div className="practice-title-row">
+                    <div className="practice-title-row">
 
-                    <h3>
-                      {area[1]}
-                    </h3>
+                      <h3>
+                        {title}
+                      </h3>
 
-                    <span className="practice-mobile-arrow">
+                      <span className="practice-mobile-arrow">
+                        ↗
+                      </span>
+
+                    </div>
+
+
+                    <p>
+                      {description}
+                    </p>
+
+
+                    <span className="practice-explore">
+
+                      View Details
+
+                      <b>
+                        ↗
+                      </b>
+
+                    </span>
+
+                  </div>
+
+
+                  {/* IMAGE */}
+
+                  <div className="practice-image">
+
+                    <img
+                      src={image}
+                      alt={title}
+                      loading="lazy"
+                    />
+
+                    <div className="practice-image-overlay" />
+
+                    <span className="practice-image-label">
+                      {number} / 12
+                    </span>
+
+                    <span className="practice-image-arrow">
                       ↗
                     </span>
 
                   </div>
 
-                  <p>
-                    {area[3]}
-                  </p>
+                </Link>
 
-                  <span className="practice-explore">
-                    Explore Practice
-                    <b>↗</b>
-                  </span>
-
-                </div>
-
-
-                {/* IMAGE */}
-
-                <div className="practice-image">
-
-                  <img
-                    src={area[4]}
-                    alt={area[1]}
-                    loading="lazy"
-                  />
-
-                  <div className="practice-image-overlay" />
-
-                  <span className="practice-image-label">
-                    {area[0]} / 06
-                  </span>
-
-                  <span className="practice-image-arrow">
-                    ↗
-                  </span>
-
-                </div>
-
-              </Link>
-
-            </motion.div>
-
-          ))}
+              </motion.div>
+            );
+          })}
 
         </div>
 
@@ -236,24 +321,17 @@ export default function PracticeAreas() {
         <div className="practice-footer">
 
           <span>
-            Six areas. One standard of counsel.
+            12 areas of practice · One professional approach.
           </span>
 
           <Link to="/practice-areas">
-
-            <span>
-              View complete expertise
-            </span>
-
-            <b>
-              ↗
-            </b>
-
+            View all services ↗
           </Link>
 
         </div>
 
       </div>
+
     </section>
   );
 }

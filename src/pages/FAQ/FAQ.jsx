@@ -3,43 +3,36 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./FAQ.css";
 
-const questions = [
-  {
-    number: "01",
-    question: "How do I book a consultation?",
-    answer:
-      "You can begin by selecting the consultation option and sharing a brief description of your matter. Our team can then guide you toward the appropriate legal area and next step.",
-  },
-  {
-    number: "02",
-    question: "Can I request an online consultation?",
-    answer:
-      "Yes. Depending on the nature of the matter and availability, consultations may be arranged through an online meeting.",
-  },
-  {
-    number: "03",
-    question: "What information should I provide?",
-    answer:
-      "A brief description of the matter, relevant dates, people or organisations involved, and important documents can help provide useful context before the consultation.",
-  },
-  {
-    number: "04",
-    question: "Can I choose a specific attorney?",
-    answer:
-      "You may express a preference for a particular attorney or practice area. The final allocation can depend on the nature of the matter, expertise required and availability.",
-  },
-  {
-    number: "05",
-    question: "How is my information handled?",
-    answer:
-      "Information shared during the consultation process should be handled with appropriate confidentiality and care. Please avoid submitting highly sensitive documents through an unsecured channel.",
-  },
-  {
-    number: "06",
-    question: "Does NYVORA AI provide legal advice?",
-    answer:
-      "NYVORA AI is designed to provide general legal information and help users navigate relevant resources. It does not replace advice from a qualified lawyer.",
-  },
+const q = [
+  [
+    "01",
+    "What information should I provide for a consultation?",
+    "A brief description of the matter, important dates, names of persons or entities involved, relevant agreements or documents, previous notices, court case details and the specific assistance required can help in understanding the matter.",
+  ],
+
+  [
+    "02",
+    "What documents may be required?",
+    "Depending on the matter, clients may be requested to provide identity and address documents, property documents, sale deeds, tax receipts, Khata documents, RTC/revenue records, Encumbrance Certificate, court orders, notices, agreements, contracts, bank documents, company documents or family/succession documents.",
+  ],
+
+  [
+    "03",
+    "Do you handle property title verification?",
+    "Yes. The stated practice includes property title verification and examination of ownership, title flow, encumbrances, revenue records and supporting property documents.",
+  ],
+
+  [
+    "04",
+    "What legal documents can be drafted?",
+    "The stated services include sale deeds, agreements to sell, gift deeds, partition deeds, release deeds, settlement deeds, rectification deeds, confirmation deeds, MoUs, JDAs, powers of attorney, lease/rent agreements, construction agreements, affidavits, undertakings, declarations, legal notices and replies.",
+  ],
+
+  [
+    "05",
+    "Does website information constitute legal advice?",
+    "No. The website information is for general informational purposes and does not constitute legal advice or create an advocate-client relationship. A professional legal consultation should be obtained based on the specific facts and circumstances of each matter.",
+  ],
 ];
 
 export default function FAQ() {
@@ -58,13 +51,28 @@ export default function FAQ() {
 
       <section className="faq-hero">
 
+        <div className="faq-hero-detail">
+          <span />
+          <span />
+          <span />
+        </div>
+
         <div className="container faq-hero-inner">
 
           <motion.div
             className="faq-hero-content"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.7,
+              ease: "easeOut",
+            }}
           >
 
             <div className="faq-kicker">
@@ -73,47 +81,23 @@ export default function FAQ() {
             </div>
 
             <h1>
-              Questions deserve
+              Clear answers to
               <br />
-              <em>clear answers.</em>
+              <em>common questions.</em>
             </h1>
 
             <p>
-              A straightforward guide to consultations, confidentiality,
-              legal enquiries and working with NYVORA.
+              Information about consultations, documents and the
+              legal services provided by NEEM LEGAL.
             </p>
 
-          </motion.div>
-
-
-          <motion.div
-            className="faq-hero-side"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.75, delay: 0.1 }}
-          >
-
-            <div className="faq-hero-seal">
-              <span>✦</span>
-              <strong>N</strong>
+            <div className="faq-hero-meta">
+              <span>NEEM LEGAL</span>
+              <i />
+              <span>BENGALURU · KARNATAKA</span>
             </div>
 
-            <p>
-              NYVORA
-              <br />
-              LEGAL COUNSEL
-            </p>
-
           </motion.div>
-
-        </div>
-
-
-        <div className="faq-hero-footer">
-
-          <span>01 — FAQ</span>
-
-          <span>NEW DELHI · INDIA</span>
 
         </div>
 
@@ -121,233 +105,126 @@ export default function FAQ() {
 
 
       {/* =====================================================
-          INTRO
+          FAQ LIST
       ===================================================== */}
 
-      <section className="faq-intro">
+      <section className="faq-list-section">
 
-        <div className="container">
+        <div className="container faq-list-container">
 
-          <div className="faq-intro-grid">
+          <div className="faq-list-intro">
 
-            <motion.div
-              className="faq-intro-heading"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-
-              <span className="faq-overline">
-                Before You Begin
-              </span>
-
-              <h2>
-                Start with
-                <br />
-                <em>clarity.</em>
-              </h2>
-
-            </motion.div>
-
-
-            <motion.div
-              className="faq-intro-content"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.08 }}
-            >
-
-              <p>
-                Legal matters can feel complicated before the first
-                conversation even begins. These answers explain the
-                basic process and what you can expect.
-              </p>
-
-              <div className="faq-intro-rule">
-
-                <span>NYVORA</span>
-
-                <i />
-
-                <span>LEGAL COUNSEL · INDIA</span>
-
-              </div>
-
-            </motion.div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          FAQ
-      ===================================================== */}
-
-      <section className="faq-content">
-
-        <div className="container">
-
-          <div className="faq-content-heading">
-
-            <div>
-
-              <span className="faq-overline">
-                Common Questions
-              </span>
-
-              <h2>
-                What would you
-                <br />
-                like to <em>know?</em>
-              </h2>
-
+            <div className="faq-section-label">
+              <span />
+              <p>Questions & Answers</p>
             </div>
 
             <p>
-              Select a question to read the answer.
+              The following information is provided for general
+              guidance. Each legal matter depends on its specific
+              facts and circumstances.
             </p>
 
           </div>
 
 
-          <div className="faq-main-grid">
+          <div className="faq-list">
 
-            {/* SIDE INDEX */}
+            {q.map(([number, question, answer], index) => {
 
-            <aside className="faq-index">
+              const isOpen = open === index;
 
-              <span className="faq-index-number">
-                06
-              </span>
+              return (
+                <motion.div
+                  className={`faq-item ${
+                    isOpen ? "active" : ""
+                  }`}
+                  key={number}
+                  initial={{
+                    opacity: 0,
+                    y: 15,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.1,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.04,
+                  }}
+                >
 
-              <div className="faq-index-line" />
-
-              <p>
-                Six common questions covering the
-                consultation and enquiry process.
-              </p>
-
-            </aside>
-
-
-            {/* QUESTIONS */}
-
-            <div className="faq-list">
-
-              {questions.map((item, index) => {
-
-                const isOpen = open === index;
-
-                return (
-                  <motion.div
-                    className={`faq-item ${
-                      isOpen ? "active" : ""
-                    }`}
-                    key={item.number}
-                    layout
+                  <button
+                    type="button"
+                    onClick={() => toggleFAQ(index)}
+                    aria-expanded={isOpen}
+                    className="faq-question"
                   >
 
-                    <button
-                      type="button"
-                      onClick={() => toggleFAQ(index)}
-                      aria-expanded={isOpen}
+                    <span className="faq-number">
+                      {number}
+                    </span>
+
+                    <strong>
+                      {question}
+                    </strong>
+
+                    <b
+                      className={`faq-toggle ${
+                        isOpen ? "open" : ""
+                      }`}
                     >
+                      {isOpen ? "−" : "+"}
+                    </b>
 
-                      <span className="faq-item-number">
-                        {item.number}
-                      </span>
-
-                      <span className="faq-item-question">
-                        {item.question}
-                      </span>
-
-                      <span className="faq-item-icon">
-                        {isOpen ? "−" : "+"}
-                      </span>
-
-                    </button>
+                  </button>
 
 
-                    <AnimatePresence initial={false}>
+                  <AnimatePresence initial={false}>
 
-                      {isOpen && (
-                        <motion.div
-                          className="faq-answer"
-                          initial={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          animate={{
-                            height: "auto",
-                            opacity: 1,
-                          }}
-                          exit={{
-                            height: 0,
-                            opacity: 0,
-                          }}
-                          transition={{
-                            duration: 0.3,
-                            ease: "easeOut",
-                          }}
-                        >
+                    {isOpen && (
+                      <motion.div
+                        className="faq-answer"
+                        initial={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        animate={{
+                          height: "auto",
+                          opacity: 1,
+                        }}
+                        exit={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        transition={{
+                          duration: 0.3,
+                          ease: "easeOut",
+                        }}
+                      >
+
+                        <div className="faq-answer-inner">
+
+                          <span />
 
                           <p>
-                            {item.answer}
+                            {answer}
                           </p>
 
-                        </motion.div>
-                      )}
+                        </div>
 
-                    </AnimatePresence>
+                      </motion.div>
+                    )}
 
-                  </motion.div>
-                );
-              })}
+                  </AnimatePresence>
 
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          LEGAL NOTE
-      ===================================================== */}
-
-      <section className="faq-legal-note">
-
-        <div className="container faq-legal-inner">
-
-          <div className="faq-legal-icon">
-            ⚖
-          </div>
-
-          <div className="faq-legal-copy">
-
-            <span className="faq-overline">
-              Legal Information
-            </span>
-
-            <h3>
-              Information is useful.
-              <br />
-              <em>Context makes it meaningful.</em>
-            </h3>
-
-            <p>
-              General information available through this website or
-              NYVORA AI should not be treated as legal advice for a
-              specific matter. Every legal situation depends on its
-              facts, documents and applicable law.
-            </p>
+                </motion.div>
+              );
+            })}
 
           </div>
 
@@ -364,28 +241,79 @@ export default function FAQ() {
 
         <div className="container faq-cta-inner">
 
-          <div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+          >
 
-            <span className="faq-cta-kicker">
-              Need More Guidance?
-            </span>
+            <div className="faq-cta-label">
+
+              <span />
+
+              <p>Still Have Questions?</p>
+
+              <span />
+
+            </div>
 
             <h2>
-              Let's make the
+              Discuss your
               <br />
-              <em>next step clear.</em>
+              <em>matter directly.</em>
             </h2>
 
+            <p>
+              To discuss a legal matter, please contact the office
+              and provide a brief description of the matter and
+              relevant documents, where appropriate.
+            </p>
+
+            <div className="faq-cta-actions">
+
+              <Link
+                to="/consultation"
+                className="faq-primary-button"
+              >
+                <span>Begin Consultation</span>
+                <b>↗</b>
+              </Link>
+
+              <Link
+                to="/contact"
+                className="faq-secondary-button"
+              >
+                <span>Contact Office</span>
+                <b>↗</b>
+              </Link>
+
+            </div>
+
+          </motion.div>
+
+
+          <div className="faq-cta-bottom">
+
+            <span>ADV. SHOBHA.H.K</span>
+
+            <i />
+
+            <span>NEEM LEGAL</span>
+
+            <i />
+
+            <span>BENGALURU · KARNATAKA</span>
+
           </div>
-
-
-          <Link
-            to="/consultation"
-            className="faq-cta-button"
-          >
-            <span>Start a Consultation</span>
-            <b>↗</b>
-          </Link>
 
         </div>
 

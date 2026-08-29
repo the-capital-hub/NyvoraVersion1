@@ -1,6 +1,33 @@
+
 /* =========================================================
-   NYVORA — NAVBAR
+   NEEM LEGAL — NAVBAR
    Premium Indian Law Firm Navigation
+========================================================= */
+
+
+/* =========================================================
+   ROOT COLORS
+========================================================= */
+
+:root {
+  --nav-green: #082e23;
+  --nav-green-dark: #06251d;
+
+  --cream: #f7f3ea;
+  --cream-soft: #fbf9f4;
+
+  --gold: #d3b36b;
+  --gold-soft: rgba(211, 179, 107, 0.55);
+
+  --white: #ffffff;
+
+  --text-light: rgba(247, 242, 232, 0.72);
+  --text-light-hover: #f7f2e8;
+}
+
+
+/* =========================================================
+   MAIN NAVBAR
 ========================================================= */
 
 .nav {
@@ -15,15 +42,19 @@
 
   padding: 20px 0;
 
-  background: transparent;
+  background: var(--nav-green);
 
-  color: #f7f2e8;
+  color: var(--white);
+
+  border-bottom: 1px solid transparent;
+
+  box-shadow: none;
 
   transition:
     padding 0.35s ease,
     background 0.35s ease,
     border-color 0.35s ease,
-    backdrop-filter 0.35s ease;
+    box-shadow 0.35s ease;
 }
 
 
@@ -34,16 +65,17 @@
 .nav-scrolled {
   padding: 11px 0;
 
-  background: rgba(8, 46, 35, 0.96);
+  background: rgba(8, 46, 35, 0.98);
 
-  border-bottom: 1px solid rgba(211, 179, 107, 0.14);
+  border-bottom:
+    1px solid rgba(211, 179, 107, 0.16);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.10);
 
   backdrop-filter: blur(18px);
 
   -webkit-backdrop-filter: blur(18px);
-
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -69,7 +101,7 @@
 
 
 /* =========================================================
-   BRAND
+   BRAND / LOGO CONTAINER
 ========================================================= */
 
 .brand {
@@ -79,87 +111,59 @@
 
   align-items: center;
 
-  gap: 11px;
-
-  color: #f7f2e8;
-
-  text-decoration: none;
-
-  transition: opacity 0.25s ease;
-}
-
-.brand:hover {
-  color: #f7f2e8;
-
-  opacity: 0.9;
-
-  text-decoration: none;
-}
-
-
-/* LOGO SYMBOL */
-
-.brand-symbol {
-  width: 36px;
-  height: 36px;
-
-  display: flex;
-
-  align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(211, 179, 107, 0.72);
+  padding: 6px 11px;
 
-  color: #d3b36b;
+  background: var(--cream);
 
-  
+  border:
+    1px solid var(--gold-soft);
 
-  font-size: 21px;
+  border-radius: 6px;
 
-  font-weight: 600;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.10);
 
-  line-height: 1;
+  text-decoration: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 
-/* BRAND TEXT */
+.brand:hover {
+  opacity: 1;
 
-.brand-copy {
-  display: flex;
+  transform: translateY(-1px);
 
-  flex-direction: column;
+  border-color:
+    rgba(211, 179, 107, 0.78);
 
-  gap: 4px;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.14);
+
+  text-decoration: none;
 }
 
-.brand-copy strong {
-  color: #f7f2e8;
 
-  
+/* =========================================================
+   ACTUAL NEEM LEGAL LOGO
+========================================================= */
 
-  font-size: 25px;
+.brand-logo {
+  display: block;
 
-  font-weight: 600;
+  width: 150px;
 
-  letter-spacing: 0.05em;
+  height: auto;
 
-  line-height: 0.82;
-}
+  max-width: 100%;
 
-.brand-copy small {
-  color: rgba(247, 242, 232, 0.46);
-
-  margin-top: 2px;
-
-  font-size: 11px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.16em;
-
-  line-height: 1;
-
-  white-space: nowrap;
+  object-fit: contain;
 }
 
 
@@ -199,9 +203,9 @@
 
   border: 1px solid transparent;
 
-  color: rgba(247, 242, 232, 0.68);
+  border-radius: 4px;
 
-  
+  color: var(--text-light);
 
   font-size: 12px;
 
@@ -224,7 +228,9 @@
 }
 
 
-/* REMOVE DEFAULT LINK DECORATION */
+/* =========================================================
+   LINK RESET
+========================================================= */
 
 .nav-item:hover,
 .nav-item:visited,
@@ -233,14 +239,18 @@
 }
 
 
-/* HOVER */
+/* =========================================================
+   LINK HOVER
+========================================================= */
 
 .nav-item:hover {
-  color: #f7f2e8;
+  color: var(--text-light-hover);
 
-  border-color: rgba(211, 179, 107, 0.32);
+  border-color:
+    rgba(211, 179, 107, 0.32);
 
-  background: rgba(211, 179, 107, 0.04);
+  background:
+    rgba(211, 179, 107, 0.05);
 }
 
 
@@ -249,33 +259,18 @@
 ========================================================= */
 
 .nav-item.active {
-  color: #f7f2e8;
+  color: var(--text-light-hover);
 
-  border-color: rgba(211, 179, 107, 0.72);
+  border-color:
+    rgba(211, 179, 107, 0.65);
 
-  background: rgba(211, 179, 107, 0.07);
+  background:
+    rgba(211, 179, 107, 0.07);
 
   box-shadow:
-    inset 0 0 0 1px rgba(211, 179, 107, 0.04);
+    inset 0 0 0 1px
+    rgba(211, 179, 107, 0.04);
 }
-
-
-/* ACTIVE SMALL GOLD LINE */
-
-/* .nav-item.active::before {
-  content: "";
-
-  position: absolute;
-
-  left: 8px;
-  right: 8px;
-
-  bottom: -1px;
-
-  height: 1px;
-
-  background: #d3b36b;
-} */
 
 
 /* =========================================================
@@ -299,13 +294,15 @@
 
   padding: 0 16px !important;
 
-  border: 1px solid rgba(211, 179, 107, 0.82);
+  border:
+    1px solid var(--gold);
 
-  background: rgba(177, 139, 62, 0.04);
+  border-radius: 4px;
 
-  color: #f7f2e8 !important;
+  background:
+    rgba(211, 179, 107, 0.06);
 
-  
+  color: var(--cream) !important;
 
   font-size: 11px;
 
@@ -323,23 +320,37 @@
     background 0.25s ease,
     color 0.25s ease,
     border-color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
+
+/* =========================================================
+   CONSULTATION HOVER
+========================================================= */
+
 .nav-cta:hover {
-  background: #d3b36b;
+  background: var(--gold);
 
-  border-color: #d3b36b;
+  border-color: var(--gold);
 
-  color: #082e23 !important;
+  color: var(--nav-green) !important;
 
   transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.14);
 
   text-decoration: none !important;
 }
 
+
+/* =========================================================
+   CONSULTATION ARROW
+========================================================= */
+
 .nav-cta b {
-  color: #d3b36b;
+  color: var(--gold);
 
   font-size: 14px;
 
@@ -350,25 +361,29 @@
     transform 0.25s ease;
 }
 
+
 .nav-cta:hover b {
-  color: #082e23;
+  color: var(--nav-green);
 
   transform: translate(2px, -2px);
 }
 
 
-/* CONSULTATION ACTIVE */
+/* =========================================================
+   CONSULTATION ACTIVE
+========================================================= */
 
 .nav-cta.active {
-  background: #d3b36b;
+  background: var(--gold);
 
-  border-color: #d3b36b;
+  border-color: var(--gold);
 
-  color: #082e23 !important;
+  color: var(--nav-green) !important;
 }
 
+
 .nav-cta.active b {
-  color: #082e23;
+  color: var(--nav-green);
 }
 
 
@@ -384,20 +399,43 @@
   flex-shrink: 0;
 
   width: 43px;
+
   height: 43px;
 
   margin-left: auto;
 
   padding: 0;
 
-  border: 1px solid rgba(211, 179, 107, 0.35);
+  border:
+    1px solid rgba(211, 179, 107, 0.35);
 
-  background: rgba(8, 46, 35, 0.15);
+  border-radius: 4px;
 
-  color: #f7f2e8;
+  background:
+    rgba(211, 179, 107, 0.06);
+
+  color: var(--cream);
 
   cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
+
+
+.hamb:hover {
+  background:
+    rgba(211, 179, 107, 0.12);
+
+  border-color:
+    rgba(211, 179, 107, 0.60);
+}
+
+
+/* =========================================================
+   HAMBURGER LINES
+========================================================= */
 
 .hamb i {
   position: absolute;
@@ -405,6 +443,7 @@
   left: 10px;
 
   width: 21px;
+
   height: 1px;
 
   background: currentColor;
@@ -414,22 +453,27 @@
     transform 0.3s ease;
 }
 
+
 .hamb i:first-child {
   top: 16px;
 }
+
 
 .hamb i:last-child {
   top: 25px;
 }
 
 
-/* HAMBURGER ACTIVE */
+/* =========================================================
+   HAMBURGER ACTIVE
+========================================================= */
 
 .hamb.active i:first-child {
   top: 21px;
 
   transform: rotate(45deg);
 }
+
 
 .hamb.active i:last-child {
   top: 21px;
@@ -450,9 +494,11 @@
     gap: 20px;
   }
 
+
   .nav-links {
     gap: 4px;
   }
+
 
   .nav-item {
     padding: 0 9px;
@@ -460,8 +506,14 @@
     font-size: 11px;
   }
 
+
   .nav-cta {
     padding: 0 13px !important;
+  }
+
+
+  .brand-logo {
+    width: 140px;
   }
 }
 
@@ -476,9 +528,14 @@
     padding: 16px 0;
   }
 
+
   .nav-scrolled {
     padding: 9px 0;
+
+    background:
+      rgba(8, 46, 35, 0.99);
   }
+
 
   .nav-inner {
     width: calc(100% - 34px);
@@ -508,7 +565,9 @@
     z-index: 1100;
 
     width: 100%;
+
     height: 100vh;
+
     height: 100dvh;
 
     display: flex;
@@ -563,7 +622,9 @@
   }
 
 
-  /* MOBILE NORMAL LINK */
+  /* =====================================================
+     MOBILE NAV LINKS
+  ===================================================== */
 
   .nav-links .nav-item {
     width: 100%;
@@ -579,9 +640,10 @@
     border-bottom-color:
       rgba(247, 242, 232, 0.10);
 
-    color: rgba(247, 242, 232, 0.78);
+    border-radius: 0;
 
-    
+    color:
+      rgba(247, 242, 232, 0.78);
 
     font-size: 27px;
 
@@ -595,40 +657,42 @@
   }
 
 
-  /* MOBILE HOVER */
+  /* =====================================================
+     MOBILE HOVER
+  ===================================================== */
 
   .nav-links .nav-item:hover {
-    color: #f7f2e8;
+    color: var(--cream);
 
-    background: rgba(211, 179, 107, 0.04);
+    background:
+      rgba(211, 179, 107, 0.04);
 
     border-color:
       rgba(211, 179, 107, 0.28);
   }
 
 
-  /* MOBILE ACTIVE */
+  /* =====================================================
+     MOBILE ACTIVE
+  ===================================================== */
 
   .nav-links .nav-item.active {
-    color: #f7f2e8;
+    color: var(--cream);
 
     border-color:
       rgba(211, 179, 107, 0.70);
 
     background:
       rgba(211, 179, 107, 0.06);
+
+    box-shadow:
+      inset 4px 0 0 var(--gold);
   }
 
 
-  .nav-links .nav-item.active::before {
-    left: 8px;
-    right: 8px;
-
-    bottom: -1px;
-  }
-
-
-  /* MOBILE CTA */
+  /* =====================================================
+     MOBILE CTA
+  ===================================================== */
 
   .nav-links .nav-cta {
     width: 100%;
@@ -644,14 +708,12 @@
       0 17px !important;
 
     border:
-      1px solid rgba(211, 179, 107, 0.78);
+      1px solid var(--gold);
 
     background:
       rgba(211, 179, 107, 0.07);
 
-    color: #f7f2e8 !important;
-
-    
+    color: var(--cream) !important;
 
     font-size: 12px;
 
@@ -662,12 +724,16 @@
     text-transform: uppercase;
   }
 
+
   .nav-links .nav-cta.active,
   .nav-links .nav-cta:hover {
-    background: #d3b36b;
+    background: var(--gold);
 
-    color: #082e23 !important;
+    border-color: var(--gold);
+
+    color: var(--nav-green) !important;
   }
+
 
   .nav-links .nav-cta b {
     font-size: 16px;
@@ -675,22 +741,18 @@
 
 
   /* =====================================================
-     MOBILE BRAND
+     MOBILE LOGO
   ===================================================== */
 
-  .brand-symbol {
-    width: 34px;
-    height: 34px;
+  .brand {
+    padding: 5px 9px;
 
-    font-size: 20px;
+    border-radius: 5px;
   }
 
-  .brand-copy strong {
-    font-size: 23px;
-  }
 
-  .brand-copy small {
-    font-size: 11px;
+  .brand-logo {
+    width: 138px;
   }
 }
 
@@ -705,31 +767,25 @@
     width: calc(100% - 26px);
   }
 
+
   .brand {
-    gap: 9px;
+    padding: 5px 8px;
+
+    border-radius: 5px;
   }
 
-  .brand-symbol {
-    width: 32px;
-    height: 32px;
 
-    font-size: 18px;
+  .brand-logo {
+    width: 128px;
   }
 
-  .brand-copy strong {
-    font-size: 21px;
-  }
-
-  .brand-copy small {
-    font-size: 4.5px;
-
-    letter-spacing: 0.13em;
-  }
 
   .hamb {
     width: 41px;
+
     height: 41px;
   }
+
 
   .nav-links {
     padding:
@@ -737,6 +793,7 @@
       22px
       25px;
   }
+
 
   .nav-links .nav-item {
     min-height: 55px;
@@ -754,13 +811,15 @@
 
 @media (max-width: 360px) {
 
-  .brand-copy small {
-    display: none;
+  .brand {
+    padding: 4px 7px;
   }
 
-  .brand-copy strong {
-    font-size: 20px;
+
+  .brand-logo {
+    width: 120px;
   }
+
 
   .nav-links {
     padding:
@@ -768,6 +827,7 @@
       18px
       22px;
   }
+
 
   .nav-links .nav-item {
     font-size: 23px;
@@ -785,3 +845,4 @@
 .nav a:active {
   text-decoration: none !important;
 }
+

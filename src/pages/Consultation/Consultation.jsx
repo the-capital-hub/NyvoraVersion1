@@ -1,61 +1,43 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import AIAssistant from "../../components/AIAssistant/AIAssistant";
 import "./Consultation.css";
 
 const steps = [
-  "Legal area",
-  "Your matter",
-  "Consultation",
-  "Your details",
+  [
+    "01",
+    "Initial Discussion",
+    "Understanding the client's legal concern, facts and the nature of the matter.",
+  ],
+  [
+    "02",
+    "Document Review",
+    "Examining relevant documents and records where appropriate.",
+  ],
+  [
+    "03",
+    "Legal Analysis",
+    "Identifying applicable provisions, issues and possible courses of action.",
+  ],
+  [
+    "04",
+    "Legal Guidance",
+    "Explaining available legal options and procedural considerations.",
+  ],
+  [
+    "05",
+    "Documentation / Representation",
+    "Where required and agreed, preparing legal documents or taking appropriate legal steps.",
+  ],
 ];
 
-const legalAreas = [
-  "Corporate & Business",
-  "Civil & Commercial",
-  "Criminal Defense",
-  "Property & Real Estate",
-  "Family Law",
-  "Cyber & Technology",
-  "Intellectual Property",
-  "Other Legal Matter",
+const prepare = [
+  "Brief description of the legal matter",
+  "Relevant documents and records",
+  "Important dates or events",
+  "Previous notices or correspondence, where applicable",
 ];
 
 export default function Consultation() {
-  const [step, setStep] = useState(0);
-
-  const [form, setForm] = useState({
-    legalArea: "",
-    matter: "",
-    consultation: "",
-    name: "",
-    email: "",
-    phone: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const updateForm = (field, value) => {
-    setForm((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
-
-  const nextStep = () => {
-    setStep((prev) => Math.min(prev + 1, 3));
-  };
-
-  const previousStep = () => {
-    setStep((prev) => Math.max(prev - 1, 0));
-  };
-
-  const submitForm = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <main className="consultation-page">
 
@@ -65,7 +47,11 @@ export default function Consultation() {
 
       <section className="consultation-hero">
 
-        <div className="consultation-hero-circle" />
+        <div className="consultation-hero-detail">
+          <span />
+          <span />
+          <span />
+        </div>
 
         <div className="container consultation-hero-inner">
 
@@ -73,506 +59,130 @@ export default function Consultation() {
             className="consultation-hero-content"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75 }}
+            transition={{
+              duration: 0.7,
+              ease: "easeOut",
+            }}
           >
 
             <div className="consultation-eyebrow">
               <span />
-              <p>Book a Consultation · India</p>
+              <p>Consultation · NEEM LEGAL</p>
             </div>
 
             <h1>
-              Let's understand
+              Let’s understand
               <br />
               <em>your matter.</em>
             </h1>
 
             <p>
-              A simple guided process to help us understand your
-              enquiry and arrange the right next conversation.
+              A legal consultation generally begins with understanding
+              the client's facts, reviewing relevant documents and
+              identifying the legal issues involved.
             </p>
 
-          </motion.div>
-
-
-          <motion.div
-            className="consultation-hero-side"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-
-            <div className="consultation-seal">
-              <span>N</span>
+            <div className="consultation-hero-meta">
+              <span>ADV. SHOBHA.H.K</span>
+              <i />
+              <span>BENGALURU · KARNATAKA</span>
             </div>
 
-            <small>NYVORA</small>
-            <small>LEGAL COUNSEL</small>
-
           </motion.div>
 
-        </div>
-
-
-        <div className="consultation-hero-bottom">
-          <span>01 — CONSULTATION</span>
-          <span>PRIVATE · CONFIDENTIAL</span>
         </div>
 
       </section>
 
 
       {/* =====================================================
-          BOOKING AREA
+          PROCESS
       ===================================================== */}
 
       <section className="consultation-section">
 
         <div className="container consultation-layout">
 
-          {/* LEFT SIDE */}
+          {/* SIDEBAR */}
 
-          <aside className="consultation-sidebar">
+          <motion.aside
+            className="consultation-sidebar"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+          >
 
             <div className="consultation-sidebar-label">
               <span />
-              <p>Your enquiry</p>
+              <p>Consultation Process</p>
             </div>
 
             <h2>
-              Four steps.
+              Five steps.
               <br />
               <em>One clear direction.</em>
             </h2>
 
             <p className="consultation-sidebar-copy">
-              Tell us a little about what you need. Your information
-              helps us understand the nature of your enquiry before
-              the consultation.
+              The consultation process remains focused on the facts,
+              relevant documents, applicable law and the nature of
+              the legal matter.
             </p>
 
-
-            <div className="consultation-progress">
-
-              {steps.map((item, index) => (
-                <div
-                  className={`consultation-progress-item ${
-                    index === step ? "active" : ""
-                  } ${index < step ? "completed" : ""}`}
-                  key={item}
-                >
-
-                  <span className="consultation-progress-number">
-                    0{index + 1}
-                  </span>
-
-                  <div>
-                    <strong>{item}</strong>
-
-                    {index === step && (
-                      <small>Current step</small>
-                    )}
-                  </div>
-
-                </div>
-              ))}
-
-            </div>
+          </motion.aside>
 
 
-            <div className="consultation-private-note">
+          {/* MAIN */}
 
-              <span>✦</span>
+          <div className="consultation-main">
 
-              <div>
-                <strong>Private & Confidential</strong>
-
-                <p>
-                  Information shared through this form is intended
-                  only for the purpose of responding to your enquiry.
-                </p>
-              </div>
-
-            </div>
-
-          </aside>
-
-
-          {/* RIGHT SIDE */}
-
-          <div className="consultation-form-wrapper">
-
-            <div className="consultation-form-top">
-
-              <span>
-                STEP {String(step + 1).padStart(2, "0")} / 04
-              </span>
-
-              {step > 0 && !submitted && (
-                <button
-                  type="button"
-                  className="consultation-back"
-                  onClick={previousStep}
-                >
-                  ← Back
-                </button>
-              )}
-
-            </div>
-
-
-            <div className="consultation-progress-bar">
-              <span
-                style={{
-                  width: `${((step + 1) / steps.length) * 100}%`,
+            {steps.map(([number, title, description], index) => (
+              <motion.div
+                className="consultation-step"
+                key={number}
+                initial={{
+                  opacity: 0,
+                  y: 18,
                 }}
-              />
-            </div>
-
-
-            <AnimatePresence mode="wait">
-
-              {/* STEP 1 */}
-
-              {step === 0 && (
-                <motion.div
-                  key="step-one"
-                  className="consultation-form-step"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.35 }}
-                >
-
-                  <div className="consultation-form-heading">
-
-                    <span>01 · LEGAL AREA</span>
-
-                    <h3>
-                      What do you need
-                      <br />
-                      <em>help with?</em>
-                    </h3>
-
-                    <p>
-                      Select the area that best describes your
-                      legal enquiry.
-                    </p>
-
-                  </div>
-
-
-                  <div className="consultation-options">
-
-                    {legalAreas.map((area) => (
-                      <button
-                        type="button"
-                        key={area}
-                        className={
-                          form.legalArea === area
-                            ? "selected"
-                            : ""
-                        }
-                        onClick={() => {
-                          updateForm("legalArea", area);
-                          nextStep();
-                        }}
-                      >
-
-                        <span>{area}</span>
-
-                        <b>↗</b>
-
-                      </button>
-                    ))}
-
-                  </div>
-
-                </motion.div>
-              )}
-
-
-              {/* STEP 2 */}
-
-              {step === 1 && (
-                <motion.div
-                  key="step-two"
-                  className="consultation-form-step"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.35 }}
-                >
-
-                  <div className="consultation-form-heading">
-
-                    <span>02 · YOUR MATTER</span>
-
-                    <h3>
-                      Tell us briefly
-                      <br />
-                      <em>about the matter.</em>
-                    </h3>
-
-                    <p>
-                      A short overview is enough. Please do not
-                      include highly sensitive or confidential
-                      documents at this stage.
-                    </p>
-
-                  </div>
-
-
-                  <div className="consultation-selected-area">
-
-                    <small>SELECTED AREA</small>
-
-                    <strong>{form.legalArea}</strong>
-
-                  </div>
-
-
-                  <textarea
-                    value={form.matter}
-                    onChange={(e) =>
-                      updateForm("matter", e.target.value)
-                    }
-                    rows="7"
-                    placeholder="Briefly describe your legal enquiry..."
-                  />
-
-
-                  <button
-                    type="button"
-                    className="consultation-primary-button"
-                    onClick={nextStep}
-                    disabled={!form.matter.trim()}
-                  >
-                    <span>Continue</span>
-                    <b>↗</b>
-                  </button>
-
-                </motion.div>
-              )}
-
-
-              {/* STEP 3 */}
-
-              {step === 2 && (
-                <motion.div
-                  key="step-three"
-                  className="consultation-form-step"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.35 }}
-                >
-
-                  <div className="consultation-form-heading">
-
-                    <span>03 · CONSULTATION</span>
-
-                    <h3>
-                      How would you like
-                      <br />
-                      <em>to speak with us?</em>
-                    </h3>
-
-                    <p>
-                      Choose the format that is most convenient
-                      for your initial consultation.
-                    </p>
-
-                  </div>
-
-
-                  <div className="consultation-consultation-options">
-
-                    {[
-                      {
-                        title: "Video Consultation",
-                        text: "A private online conversation.",
-                      },
-                      {
-                        title: "Phone Consultation",
-                        text: "Speak with our legal team by phone.",
-                      },
-                      {
-                        title: "In-Person Consultation",
-                        text: "Meet our counsel at our office.",
-                      },
-                    ].map((item) => (
-                      <button
-                        type="button"
-                        key={item.title}
-                        className={
-                          form.consultation === item.title
-                            ? "selected"
-                            : ""
-                        }
-                        onClick={() => {
-                          updateForm(
-                            "consultation",
-                            item.title
-                          );
-                          nextStep();
-                        }}
-                      >
-
-                        <span className="consultation-option-icon">
-                          ✦
-                        </span>
-
-                        <div>
-                          <strong>{item.title}</strong>
-                          <small>{item.text}</small>
-                        </div>
-
-                        <b>↗</b>
-
-                      </button>
-                    ))}
-
-                  </div>
-
-                </motion.div>
-              )}
-
-
-              {/* STEP 4 */}
-
-              {step === 3 && !submitted && (
-                <motion.div
-                  key="step-four"
-                  className="consultation-form-step"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.35 }}
-                >
-
-                  <div className="consultation-form-heading">
-
-                    <span>04 · YOUR DETAILS</span>
-
-                    <h3>
-                      Where should we
-                      <br />
-                      <em>reach you?</em>
-                    </h3>
-
-                    <p>
-                      Share your basic contact details so our team
-                      can respond to your enquiry.
-                    </p>
-
-                  </div>
-
-
-                  <form
-                    className="consultation-details-form"
-                    onSubmit={submitForm}
-                  >
-
-                    <label>
-                      <span>FULL NAME</span>
-
-                      <input
-                        type="text"
-                        value={form.name}
-                        onChange={(e) =>
-                          updateForm("name", e.target.value)
-                        }
-                        placeholder="Your full name"
-                        required
-                      />
-                    </label>
-
-
-                    <label>
-                      <span>EMAIL ADDRESS</span>
-
-                      <input
-                        type="email"
-                        value={form.email}
-                        onChange={(e) =>
-                          updateForm("email", e.target.value)
-                        }
-                        placeholder="you@example.com"
-                        required
-                      />
-                    </label>
-
-
-                    <label>
-                      <span>PHONE NUMBER</span>
-
-                      <input
-                        type="tel"
-                        value={form.phone}
-                        onChange={(e) =>
-                          updateForm("phone", e.target.value)
-                        }
-                        placeholder="+91"
-                        required
-                      />
-                    </label>
-
-
-                    <button
-                      type="submit"
-                      className="consultation-primary-button"
-                    >
-                      <span>Request Consultation</span>
-                      <b>↗</b>
-                    </button>
-
-                  </form>
-
-                </motion.div>
-              )}
-
-
-              {/* SUCCESS */}
-
-              {submitted && (
-                <motion.div
-                  key="success"
-                  className="consultation-success"
-                  initial={{ opacity: 0, scale: 0.97 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.45 }}
-                >
-
-                  <div className="consultation-success-mark">
-                    ✓
-                  </div>
-
-                  <span>ENQUIRY RECEIVED</span>
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.15,
+                }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.05,
+                }}
+              >
+
+                <span className="consultation-step-number">
+                  {number}
+                </span>
+
+                <div className="consultation-step-content">
 
                   <h3>
-                    Thank you for
-                    <br />
-                    <em>reaching out.</em>
+                    {title}
                   </h3>
 
                   <p>
-                    Your consultation enquiry has been recorded.
-                    Our team will review the information provided
-                    and get back to you regarding the next step.
+                    {description}
                   </p>
 
-                  <Link
-                    to="/"
-                    className="consultation-home-link"
-                  >
-                    Return to homepage ↗
-                  </Link>
+                </div>
 
-                </motion.div>
-              )}
+                <span className="consultation-step-arrow">
+                  ↗
+                </span>
 
-            </AnimatePresence>
+              </motion.div>
+            ))}
 
           </div>
 
@@ -582,31 +192,161 @@ export default function Consultation() {
 
 
       {/* =====================================================
-          BOTTOM NOTE
+          BEFORE CONSULTATION
       ===================================================== */}
 
-      <section className="consultation-bottom">
+      <section className="consultation-preparation">
 
-        <div className="container consultation-bottom-inner">
+        <div className="container">
 
-          <div>
-            <span>NYVORA</span>
-            <p>Legal Counsel · India</p>
+          <div className="consultation-preparation-grid">
+
+            <div className="consultation-preparation-heading">
+
+              <div className="consultation-label">
+                <span />
+                <p>Before the Consultation</p>
+              </div>
+
+              <h2>
+                Come prepared.
+                <br />
+                <em>Start with the facts.</em>
+              </h2>
+
+            </div>
+
+
+            <div className="consultation-preparation-list">
+
+              {prepare.map((item, index) => (
+                <div
+                  className="consultation-preparation-item"
+                  key={item}
+                >
+
+                  <span>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <p>
+                    {item}
+                  </p>
+
+                </div>
+              ))}
+
+            </div>
+
           </div>
-
-          <p>
-            An initial enquiry does not create an
-            advocate-client relationship.
-          </p>
-
-          <span>PRIVATE · CONFIDENTIAL</span>
 
         </div>
 
       </section>
 
 
-      <AIAssistant />
+      {/* =====================================================
+          CONTACT CTA
+      ===================================================== */}
+
+      <section className="consultation-cta">
+
+        <div className="container">
+
+          <motion.div
+            className="consultation-cta-inner"
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+          >
+
+            <div className="consultation-cta-label">
+              <span />
+              <p>Begin an Enquiry</p>
+              <span />
+            </div>
+
+            <h2>
+              Discuss your
+              <br />
+              <em>legal matter.</em>
+            </h2>
+
+            <p>
+              To discuss a legal matter, please contact the office
+              and provide a brief description of the matter and
+              relevant documents, where appropriate.
+            </p>
+
+
+            <div className="consultation-contact-details">
+
+              <div>
+                <small>PHONE</small>
+                <a href="tel:+919886112141">
+                  9886112141
+                </a>
+              </div>
+
+              <div>
+                <small>EMAIL</small>
+                <a href="mailto:attorneyshobha@gmail.com">
+                  attorneyshobha@gmail.com
+                </a>
+              </div>
+
+            </div>
+
+
+            <div className="consultation-cta-actions">
+
+              <a
+                href="tel:+919886112141"
+                className="consultation-primary-button"
+              >
+                <span>Call the Office</span>
+                <b>↗</b>
+              </a>
+
+              <Link
+                to="/contact"
+                className="consultation-secondary-button"
+              >
+                <span>Contact Page</span>
+                <b>↗</b>
+              </Link>
+
+            </div>
+
+
+            <div className="consultation-cta-bottom">
+
+              <span>ADV. SHOBHA.H.K</span>
+
+              <i />
+
+              <span>NEEM LEGAL</span>
+
+              <i />
+
+              <span>BENGALURU · KARNATAKA</span>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+
+      </section>
 
     </main>
   );
